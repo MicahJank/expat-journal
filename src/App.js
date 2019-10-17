@@ -3,12 +3,13 @@ import './App.css';
 import { Route } from 'react-router-dom';
 
 import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
 
 function App() {
   return (
     <div className="App">
-      <Route exact path="/sign-in" component={LoginPage} />
-      <Route path="/sign-up" />
+      <Route path="/sign-in" component={LoginPage} />
+      <Route path="/sign-up" component={SignUpPage} />
     </div>
   );
 }
