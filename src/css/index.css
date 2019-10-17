@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
 }
 a {
   font-size: 2rem;
@@ -154,7 +155,6 @@ a {
 }
 .navigation-bar .nav-bottom a {
   color: #384745;
-  font-family: Montserrat;
   font-size: 2.5rem;
   letter-spacing: 0.45px;
   line-height: 30px;
