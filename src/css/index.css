@@ -137,16 +137,15 @@ a {
 }
 .navigation-bar {
   width: 100%;
-  padding: 40px;
-}
-.navigation-bar a {
-  text-decoration: none;
-  font-size: 2.5rem;
+  padding: 15px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 3px 2px 3px 0 #16BAC5;
 }
 .navigation-bar .nav-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2.9rem;
 }
 .navigation-bar .nav-bottom {
   display: flex;
@@ -160,6 +159,7 @@ a {
   letter-spacing: 0.45px;
   line-height: 30px;
   text-align: center;
+  text-decoration: none;
 }
 .navigation-bar .nav-bottom .nav-search {
   height: 37px;
