@@ -10,10 +10,10 @@ const NavigationBar = () => {
 
     return (
         <div>
-            <NavLink>NewsFeed</NavLink>
-            <NavLink>Saved content</NavLink>
-            <NavLink>Upload</NavLink>
-            <NavLink>Notifications</NavLink>
+            <NavLink to={'/newsfeed'}>NewsFeed</NavLink>
+            <NavLink to={'/saved-content'}>Saved content</NavLink>
+            <NavLink to={'/upload'}>Upload</NavLink>
+            <NavLink to={'/notifications'}>Notifications</NavLink>
         </div>
     )
 }
