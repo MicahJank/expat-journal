@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 const NavigationBar = () => {
 
     return (
-        <div>
+        <div className='navigation-bar'>
             <NavLink to={'/newsfeed'}>NewsFeed</NavLink>
             <NavLink to={'/saved-content'}>Saved content</NavLink>
             <NavLink to={'/upload'}>Upload</NavLink>

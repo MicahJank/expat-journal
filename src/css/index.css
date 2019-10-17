@@ -132,3 +132,6 @@ table {
 html {
   font-size: 62.5%;
 }
+.navigation-bar a {
+  text-decoration: none;
+}
