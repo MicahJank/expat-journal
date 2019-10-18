@@ -2,6 +2,8 @@ import React from 'react';
 
 import { NavLink } from 'react-router-dom';
 
+import NavigationRouting from './NavigationRouting.js';
+
 // import imgs
 import logo from '../imgs/LogoEJ.png';
 import home from '../imgs/home.png';
@@ -14,6 +16,7 @@ import notification from '../imgs/notification.png';
 const NavigationBar = () => {
 
     return (
+        <>
         <div className='navigation-bar'>
             <div className='nav-top'>
                 <img src={logo} alt='expat journal logo' />
@@ -39,6 +42,12 @@ const NavigationBar = () => {
                 <input className='nav-search' placeholder='Search country or city' />
             </div>
         </div>
+
+        <NavigationRouting />
+        </>
+
+       
+       
     )
 }
 
