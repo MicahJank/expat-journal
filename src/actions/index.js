@@ -11,11 +11,11 @@ export const DELETE_STORY= "DELETE_STORY";
 
 // FETCH STORIES FROM API
 
-export const fetchStory = () => {
+export const fetchStories = () => {
   return function(dispatch) {
     dispatch({ type: FETCH_STORY_START });
     axios
-      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .get("https://pt11expat.herokuapp.com/api/stories/")
       .then(res => {
         console.log(res);
         dispatch({ FETCH_STORY_SUCCESS });
