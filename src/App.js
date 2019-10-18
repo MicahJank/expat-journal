@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 
 import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
@@ -14,11 +14,10 @@ import NavigationBar from './components/NavigationBar.js';
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
       <Switch>
-        <Route exact path="/" />
-        <Route path="/sign-in" component={LoginPage} />
-        <Route path="/sign-up" component={SignUpPage} />
+        <Route exact path="/sign-in" component={LoginPage} />
+        <Route exact path="/sign-up" component={SignUpPage} />
+        <Route path="/" component={NavigationBar} />
         <Route path="/upload" />
         <Route path="/newsfeed" />
       </Switch>
