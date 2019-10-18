@@ -1,4 +1,8 @@
 import React from 'react';
+import './App.css';
+
+import LoginPage from './components/LoginPage';
+import SignUpPage from './components/SignUpPage';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -8,17 +12,16 @@ import { Route, Switch } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar.js';
 
 function App() {
-
   return (
     <div className="App">
       <NavigationBar />
-        <Switch>
-          <Route exact path='/' />
-          <Route path='/sign-in' />
-          <Route path='/sign-up' />
-          <Route path='/upload' />
-          <Route path='/newsfeed' />
-        </Switch>
+      <Switch>
+        <Route exact path="/" />
+        <Route path="/sign-in" component={LoginPage} />
+        <Route path="/sign-up" component={SignUpPage} />
+        <Route path="/upload" />
+        <Route path="/newsfeed" />
+      </Switch>
     </div>
   );
 }

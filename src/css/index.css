@@ -184,3 +184,6 @@ a {
   padding: 7px;
   padding-left: 16px;
 }
+.temp-auth-header-color {
+  color: red;
+}
