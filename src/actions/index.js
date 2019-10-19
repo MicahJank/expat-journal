@@ -7,7 +7,7 @@ export const ADD_STORY = "ADD_STORY";
 export const ADD_STORY_SUCCESS = "ADD_STORY_SUCCESS";
 export const ADD_STORY_FAIL = "ADD_STORY_FAIL";
 export const EDIT_STORY = "EDIT_STORY";
-export const DELETE_STORY= "DELETE_STORY";
+export const DELETE_STORY = "DELETE_STORY";
 
 // FETCH STORIES FROM API
 
@@ -17,8 +17,8 @@ export const fetchStories = () => {
     axios
       .get("https://pt11expat.herokuapp.com/api/stories/")
       .then(res => {
-        console.log(res);
-        dispatch({ FETCH_STORY_SUCCESS });
+        console.log(res.data);
+        dispatch({ FETCH_STORY_SUCCESS, payload: res.data });
       })
       .catch(() => {
         dispatch({ type: FETCH_STORY_ERROR });
@@ -26,7 +26,7 @@ export const fetchStories = () => {
   };
 };
 
-// ADD STORY TO API
+/* // ADD STORY TO API
 
 export const addStory = add => dispatch => {
   dispatch({ type: ADD_STORY });
@@ -34,7 +34,7 @@ export const addStory = add => dispatch => {
   axios
     .post("https://jsonplaceholder.typicode.com/todos/1", add)
     .then(res => {
-      dispatch({ type: ADD_STORY_SUCCESS, payload: res });
+      dispatch({ type: ADD_STORY_SUCCESS, payload: res.data });
     })
     .catch(err => {
       dispatch({ type: ADD_STORY_FAIL, payload: err });
@@ -46,20 +46,19 @@ export const addStory = add => dispatch => {
 export const editStory = edit => dispatch => {
   axios
     .put("https://jsonplaceholder.typicode.com/todos/id", edit)
-    .then( res => {
-        dispatch({ type: EDIT_STORY, payload: res});
+    .then(res => {
+      dispatch({ type: EDIT_STORY, payload: res.data });
     })
-    .catch(err => (console.log(err))
-    )};
-
+    .catch(err => console.log(err));
+};
 
 // DELETE EXISTING STORY
 
 export const deleteStory = del => dispatch => {
-  axios 
-    .delete("https://jsonplaceholder.typicode.com/todos/id", del) 
+  axios
+    .delete("https://jsonplaceholder.typicode.com/todos/id", del)
     .then(res => {
-      dispatch({type: DELETE_STORY, payload: res});
+      dispatch({ type: DELETE_STORY, payload: res.data });
     })
-    .catch(err => (console.log(err))
-    )};
+    .catch(err => console.log(err));
+}; */
