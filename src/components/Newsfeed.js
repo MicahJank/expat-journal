@@ -2,7 +2,7 @@ import React from "react";
 import { fetchStories } from "../actions";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { staticImage } from "../imgs/static_travel_img.png";
+import staticImage from "../imgs/static_travel_img.jpg";
 
 class NewsFeed extends React.Component {
   componentDidMount() {
