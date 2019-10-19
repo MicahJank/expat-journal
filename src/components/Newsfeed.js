@@ -1,29 +1,27 @@
-import React from "react";
-import { fetchStories } from "../actions";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import staticImage from "../imgs/static_travel_img.jpg";
+import { fetchStories } from "../actions";
 
-class NewsFeed extends React.Component {
+class NewsFeed extends Component {
   componentDidMount() {
     this.props.fetchStories();
   }
   render() {
     return (
-      <>
-        <div>Hello</div>
-        {this.props.stories.map(x => {
-          return (
-            <div>
-              <Link to={`/stories/${x.id}`}>
-                <div id={x.id}>
-                  <img src={staticImage} alt="" />
+      <div>
+      
+          <div className="newposts">New posts from all Expats </div>
+          <div className="allstories">
+            {this.props.stories.map(story => {
+              return (
+                <div id={story.id} className="singlestory">
+                  <img src="https://www.azamara.com/sites/default/files/heros/1800x1000-zakynthos-greece.jpg" />
                 </div>
-              </Link>
-            </div>
-          );
-        })}
-      </>
+              );
+            })}
+          </div>
+       
+      </div>
     );
   }
 }
@@ -32,7 +30,7 @@ const mapStateToProps = state => {
   return {
     stories: state.stories,
     isFetching: state.isFetching,
-    error: state.err
+    error: state.error
   };
 };
 

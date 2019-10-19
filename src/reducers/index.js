@@ -18,13 +18,15 @@ const reducer = (state = initialState, action) => {
     case FETCH_STORY_START:
       return {
         ...state,
+        error: false,
         isFetching: true
       };
     case FETCH_STORY_SUCCESS:
       return {
         ...state,
-        stories: action.payload,
-        isFetching: false
+        error: false,
+        isFetching: false,
+        stories: action.payload
       };
     case FETCH_STORY_ERROR:
       return {
