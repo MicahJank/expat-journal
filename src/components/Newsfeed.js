@@ -11,6 +11,7 @@ class NewsFeed extends React.Component {
   render() {
     return (
       <>
+        <div>Hello</div>
         {this.props.stories.map(x => {
           return (
             <div>

@@ -17,8 +17,7 @@ export const fetchStories = () => {
     axios
       .get("https://pt11expat.herokuapp.com/api/stories/")
       .then(res => {
-        console.log(res);
-        dispatch({ FETCH_STORY_SUCCESS });
+        dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
       })
       .catch(() => {
         dispatch({ type: FETCH_STORY_ERROR });

@@ -23,6 +23,7 @@ const reducer = (state = initialState, action) => {
     case FETCH_STORY_SUCCESS:
       return {
         ...state,
+        stories: action.payload,
         isFetching: false
       };
     case FETCH_STORY_ERROR:
