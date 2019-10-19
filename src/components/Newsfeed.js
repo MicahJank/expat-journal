@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStories } from "../actions";
-import placeholderimg from "../imgs/static.jpg";
 
 class NewsFeed extends Component {
   componentDidMount() {
@@ -9,20 +8,20 @@ class NewsFeed extends Component {
   }
   render() {
     return (
-      <>
-        <div className="newsfeed">
-          <span className="newposts">New posts from all Expats </span>
+      <div>
+      
+          <div className="newposts">New posts from all Expats </div>
           <div className="allstories">
             {this.props.stories.map(story => {
               return (
                 <div id={story.id} className="singlestory">
-                  <img src={placeholderimg} />
+                  <img src="https://www.azamara.com/sites/default/files/heros/1800x1000-zakynthos-greece.jpg" />
                 </div>
               );
             })}
           </div>
-        </div>
-      </>
+       
+      </div>
     );
   }
 }

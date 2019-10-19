@@ -194,23 +194,18 @@ a {
 .temp-auth-header-color {
   color: red;
 }
-.newsfeed {
-  padding: 30px;
-}
 .newposts {
+  padding: 40px;
   text-decoration: underline;
   color: #384745;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   letter-spacing: 0.36px;
   line-height: 24px;
-  text-align: center;
 }
 .allstories {
-  margin: 0 auto;
-  width: auto;
+  max-width: 1800px;
   justify-content: center;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
 }
@@ -219,5 +214,6 @@ a {
 }
 .allstories .singlestory img {
   object-fit: cover;
-  max-width: 700px;
+  max-width: 630px;
+  border-radius: 50px;
 }
