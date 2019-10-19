@@ -1,6 +1,8 @@
 .newsfeed {
-    padding: 40px;
-    .newposts {
+   padding: 30px; 
+}
+
+.newposts {
         text-decoration: underline;
         color: #384745;
         font-family:  @MainFont;
@@ -9,4 +11,21 @@
         line-height: 24px;
         text-align: center;
     }
-}
+    
+   
+    .allstories{
+       margin: 0 auto; 
+      width: auto;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      .singlestory {
+         margin: 11px;
+         img {
+            object-fit: cover;
+            max-width: 700px;
+         }
+      }
+   }
+

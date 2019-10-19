@@ -195,9 +195,9 @@ a {
   color: red;
 }
 .newsfeed {
-  padding: 40px;
+  padding: 30px;
 }
-.newsfeed .newposts {
+.newposts {
   text-decoration: underline;
   color: #384745;
   font-family: 'Montserrat', sans-serif;
@@ -205,4 +205,19 @@ a {
   letter-spacing: 0.36px;
   line-height: 24px;
   text-align: center;
+}
+.allstories {
+  margin: 0 auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.allstories .singlestory {
+  margin: 11px;
+}
+.allstories .singlestory img {
+  object-fit: cover;
+  max-width: 700px;
 }
