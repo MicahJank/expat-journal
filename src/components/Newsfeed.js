@@ -15,7 +15,7 @@ class NewsFeed extends Component {
           return (
             <div>
        
-                <div>
+                <div id={story.id}>
                   <h1>{story.sName}</h1>
                   <p>{story.sContent}</p>
                 </div>

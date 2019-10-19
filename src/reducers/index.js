@@ -27,7 +27,6 @@ const reducer = (state = initialState, action) => {
         error: false,
         isFetching: false,
         stories: action.payload
- 
       };
     case FETCH_STORY_ERROR:
       return {
