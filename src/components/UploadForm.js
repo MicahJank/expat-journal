@@ -12,6 +12,7 @@ const UploadForm = () => {
             <div className='upload-top'>
                 <div className='upload-img-container'>
                     <img src={uploadImg} alt='upload' />
+                    <p>Upload image</p>
                 </div>
 
                 <form className='upload-form'>
