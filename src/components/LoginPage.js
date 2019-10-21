@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/index.css';
 
 // import imgs
@@ -36,12 +37,14 @@ export default function LoginPage() {
             placeholder="Password"
             required
           ></input>
-          <button type="submit" className="submit-rectangle">
-            Join now
+          <button type="submit" className="submit-rectangle sign-in-rectangle">
+            Sign in
           </button>
         </form>
 
-        <h2>New to Expat Journal? Sign up here!</h2>
+        <h4>
+          New to Expat Journal? <Link to="/sign-up">Sign up</Link> here!
+        </h4>
       </div>
 
       <div className="auth-bottom-section">
