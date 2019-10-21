@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/index.css';
 
 // import imgs
 import logo from '../imgs/LogoEJ.png';
@@ -26,20 +25,28 @@ export default function SignUpPage() {
         <h2>Sign up to start your journal</h2>
 
         <form>
-          <input type="text" name="name" placeholder="Name" required></input>
-          <input type="email" name="email" placeholder="Email" required></input>
+          <input type="text" 
+          name="name" 
+          placeholder="Name" 
+          required />
+
+          <input 
+          type="email" 
+          name="email" 
+          placeholder="Email" 
+          required />
           <input
             type="password"
             name="password"
             placeholder="Password"
             required
-          ></input>
+          />
           <input
             type="password"
             name="confirm-password"
             placeholder="Confirm Password"
             required
-          ></input>
+          />
           <button type="submit" className="submit-rectangle">
             Join now
           </button>

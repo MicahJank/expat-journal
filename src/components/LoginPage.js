@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../css/index.css';
 
 // import imgs
 import logo from '../imgs/LogoEJ.png';
