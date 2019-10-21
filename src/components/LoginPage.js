@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/index.css';
 
 // import imgs
@@ -6,9 +7,6 @@ import logo from '../imgs/LogoEJ.png';
 import group from '../imgs/group-svgrepo-com.png';
 import uploader from '../imgs/icon-uploader-2.png';
 import save from '../imgs/save-button-2.png';
-
-// console to help me remember which page i'm working on!
-console.log('Login page!');
 
 export default function LoginPage() {
   return (
@@ -36,12 +34,14 @@ export default function LoginPage() {
             placeholder="Password"
             required
           ></input>
-          <button type="submit" className="submit-rectangle">
-            Join now
+          <button type="submit" className="submit-rectangle sign-in-rectangle">
+            Sign in
           </button>
         </form>
 
-        <h2>New to Expat Journal? Sign up here!</h2>
+        <h4>
+          New to Expat Journal? <Link to="/sign-up">Sign up</Link> here!
+        </h4>
       </div>
 
       <div className="auth-bottom-section">
