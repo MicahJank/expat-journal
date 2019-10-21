@@ -8,9 +8,6 @@ import group from '../imgs/group-svgrepo-com.png';
 import uploader from '../imgs/icon-uploader-2.png';
 import save from '../imgs/save-button-2.png';
 
-// console to help me remember which page i'm working on!
-console.log('Login page!');
-
 export default function LoginPage() {
   return (
     <div className="auth-page">
