@@ -271,6 +271,21 @@ a {
   padding-top: 70px;
   margin-bottom: 5px;
 }
+.auth-page .auth-form h4 {
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.51px;
+  line-height: 34px;
+  text-align: center;
+  padding-top: 75px;
+}
+.auth-page .auth-form h4 a {
+  color: #21a4f2;
+  font-size: 28px;
+  font-weight: 300;
+}
 .auth-page .auth-form ::placeholder,
 .auth-page .auth-form input {
   color: #6a6a6a;
@@ -317,6 +332,9 @@ a {
   line-height: 30px;
   text-align: center;
   margin: 20px auto;
+}
+.auth-page .auth-form .sign-in-rectangle {
+  color: #16bac5;
 }
 .auth-page .auth-bottom-section {
   background: white;
