@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import './css/index.css';
+
+import { HashRouter as Router } from 'react-router-dom';
 import reducer from './reducers';
 import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';

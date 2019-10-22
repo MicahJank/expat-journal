@@ -12,6 +12,7 @@ const UploadForm = () => {
             <div className='upload-top'>
                 <div className='upload-img-container'>
                     <img src={uploadImg} alt='upload' />
+                    <p>Upload image</p>
                 </div>
 
                 <form className='upload-form'>
@@ -27,7 +28,7 @@ const UploadForm = () => {
                             <p>*All Expat Journal community can see this post.</p>
                         </div>
                     </div>
-                    <div>
+                    <div className='input-container title'>
                         <label>Title</label>
                         <input 
                         type='text' 
@@ -37,7 +38,7 @@ const UploadForm = () => {
                         />
                     </div>
 
-                    <div>
+                    <div className='input-container country'>
                         <label>City/Town, State, Country</label>
                         <input 
                         type='text' 
@@ -47,7 +48,7 @@ const UploadForm = () => {
                         />
                     </div>
 
-                    <div>
+                    <div className='input-container emoji'>
                         <label>Choose and Emoji for this day</label>
                         <input 
                         type='text' 
@@ -57,7 +58,7 @@ const UploadForm = () => {
                         />
                     </div>
 
-                    <div>
+                    <div className='input-container tags'>
                         <label>Key words/tags</label>
                         <input 
                         type='text' 
