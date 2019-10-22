@@ -452,3 +452,17 @@ a {
   max-width: 630px;
   border-radius: 50px;
 }
+.footer-bar {
+  height: 116px;
+  background-color: #edfcfd;
+  text-align: right;
+  padding-right: 42px;
+}
+.footer-bar li {
+  display: inline-block;
+  color: #384745;
+  font-size: 20px;
+  letter-spacing: 0.36px;
+  padding-left: 75px;
+  line-height: 116px;
+}
