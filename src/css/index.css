@@ -451,7 +451,11 @@ a {
   margin: 11px;
 }
 .allstories .singlestory img {
-  object-fit: cover;
-  max-width: 630px;
-  border-radius: 50px;
+  max-width: 350px;
+  max-height: 400px;
+  border-radius: 10px;
+}
+.allstories .singlestory h1 {
+  padding: 30px;
+  font-size: 30px;
 }
