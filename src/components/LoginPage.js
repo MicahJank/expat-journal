@@ -28,10 +28,10 @@ class LoginPage extends React.Component {
   login = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/login", this.state.credentials)
+      .post("/sign-in", this.state.credentials)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
-        this.props.history.push("/stories");
+        this.props.history.push("/newsfeed");
       })
       .catch(err => console.log(err));
   };
