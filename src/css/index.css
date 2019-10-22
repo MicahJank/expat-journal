@@ -317,6 +317,9 @@ a {
   outline: none;
   border: 1px solid #16bac5;
 }
+.auth-page .auth-form input.error {
+  border: 1px solid #c51616;
+}
 .auth-page .auth-form .submit-rectangle {
   box-sizing: border-box;
   display: block;
