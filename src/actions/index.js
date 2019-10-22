@@ -26,7 +26,7 @@ export const fetchStories = () => {
   };
 };
 
-/* // ADD STORY TO API
+ // ADD STORY TO API
 
 export const addStory = add => dispatch => {
   dispatch({ type: ADD_STORY });
@@ -61,4 +61,4 @@ export const deleteStory = del => dispatch => {
       dispatch({ type: DELETE_STORY, payload: res.data });
     })
     .catch(err => console.log(err));
-}; */
+}; 
