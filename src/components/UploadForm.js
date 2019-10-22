@@ -1,22 +1,22 @@
 import React from 'react';
 
-import axios from 'axios';
+import { addStory } from '../actions';
+import { connect } from 'react-redux';
 
 import uploadImg from '../imgs/upload.png';
+import placeholderImg from '../imgs/static.jpg';
+
 import useForm from '../utils/useForm.js';
 
-const UploadForm = () => {
+const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
 
     const submitHandler = e => {
         e.preventDefault();
-        const { sName, sContent, } = formInputs;
-        axios.post(' https://pt11expat.herokuapp.com/api/stories/new/', { sName, sContent })
-            .then(res => {
-                console.log(res);
-            })
-            .catch(err => console.log(err));
+        const { sName, sContent } = formInputs;
+        props.addStory({ sName, sContent, sImageUrl: placeholderImg });
         clearForm();
+        props.history.push('/newsfeed');
     }
 
     return (
@@ -106,4 +106,4 @@ const UploadForm = () => {
     )
 }
 
-export default UploadForm;
+export default connect(null, { addStory })(UploadForm);
