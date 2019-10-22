@@ -15,7 +15,8 @@ class NewsFeed extends Component {
             {this.props.stories.map(story => {
               return (
                 <div id={story.id} className="singlestory">
-                  <img src="https://www.azamara.com/sites/default/files/heros/1800x1000-zakynthos-greece.jpg" />
+                  <img src={story.sImageUrl} />
+                  <h1>{story.sName}</h1>
                 </div>
               );
             })}
