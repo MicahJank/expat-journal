@@ -28,9 +28,9 @@ class LoginPage extends React.Component {
   login = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/sign-in", this.state.credentials)
+      .post("/users/login", this.state.credentials)
       .then(res => {
-        localStorage.setItem("token", res.data.payload);
+        localStorage.setItem("token", res.data.token);
         this.props.history.push("/newsfeed");
       })
       .catch(err => console.log(err));
@@ -54,12 +54,14 @@ class LoginPage extends React.Component {
         <div className="auth-form">
           <h2>Welcome back!</h2>
 
-          <form>
-            <input type="text" name="username" placeholder="Name" required></input>
+          <form onSubmit={this.login}>
+            <input type="text" name="username" placeholder="Name" value={this.state.credentials.username} onChange={this.handleChange} required></input>
             <input
               type="password"
               name="password"
               placeholder="Password"
+              value={this.state.credentials.password}
+              onChange={this.handleChange}
               required
             ></input>
             <button
