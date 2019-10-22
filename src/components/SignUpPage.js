@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import useForm from '../utils/useForm.js';
+import axios from 'axios';
 
 // import imgs
 import logo from '../imgs/LogoEJ.png';
@@ -6,7 +9,23 @@ import group from '../imgs/group-svgrepo-com.png';
 import uploader from '../imgs/icon-uploader-2.png';
 import save from '../imgs/save-button-2.png';
 
-export default function SignUpPage() {
+export default function SignUpPage(props) {
+  const [formInfo, handleChanges, clearForm] = useForm();
+
+  const submitHandler = e => {
+    e.preventDefault();
+      const {username, password} = formInfo;
+
+      axios.post(`https://pt11expat.herokuapp.com/api/users/register`, { username, password})
+        .then(res => {
+          localStorage.setItem('token', res.data.token);
+          props.history.push('/newsfeed');
+        })
+        .catch(err => console.log(err));
+
+      clearForm();
+  }
+
   return (
     <div className="auth-page">
       <div className="hero-section">
@@ -24,32 +43,46 @@ export default function SignUpPage() {
       <div className="auth-form">
         <h2>Sign up to start your journal</h2>
 
-        <form>
-          <input type="text" 
-          name="name" 
-          placeholder="Name" 
+        <form onSubmit={submitHandler}>
+
+          <input className={formInfo.error ? 'error' : ''} 
+          type="text" 
+          name="username" 
+          placeholder="Name"
+          value={formInfo.username || ''}
+          onChange={handleChanges} 
           required />
 
-          <input 
+          <input className={formInfo.error ? 'error' : ''} 
           type="email" 
           name="email" 
-          placeholder="Email" 
+          placeholder="Email"
+          value={formInfo.email || ''}
+          onChange={handleChanges} 
           required />
-          <input
+
+          <input className={formInfo.error ? 'error' : ''}
             type="password"
             name="password"
             placeholder="Password"
+            value={formInfo.password || ''}
+            onChange={handleChanges}
             required
           />
-          <input
+
+          <input className={formInfo.error ? 'error' : ''}
             type="password"
-            name="confirm-password"
+            name="confirmPassword"
             placeholder="Confirm Password"
+            value={formInfo.confirmPassword || ''}
+            onChange={handleChanges}
             required
           />
+
           <button type="submit" className="submit-rectangle">
             Join now
           </button>
+
         </form>
       </div>
 
