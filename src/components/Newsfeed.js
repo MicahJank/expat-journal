@@ -16,6 +16,7 @@ class NewsFeed extends Component {
               return (
                 <div id={story.id} className="singlestory">
                   <img src={story.sImageUrl} />
+                  <h1>{story.sName}</h1>
                 </div>
               );
             })}
