@@ -10,6 +10,7 @@ const NavigationRouting = () => {
     <>
       <Route path="/upload" component={UploadForm} />
       <Route path="/edit" component={EditForm} />
+      <Route path="/edit/:id" component={EditForm} />
       <Route path="/newsfeed" component={NewsFeed} />
       <Route path="/" component={FooterBar} />
     </>
