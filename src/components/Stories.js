@@ -1,18 +1,15 @@
-import React from 'react';
+import React from "react";
 
+function Story() {
+  const story = props.match.params.id;
 
-const Stories = props => {
-    return (
-      
-      <>
-
-            <h1>{props.title}</h1>
-           <img src={props.image} alt="" />
-           <p>{props.paragraph}</p>
-
-           </>
-       
-    )
+  return (
+    <div id={story.id}>
+      <h1>{story.title}</h1>
+      <img src={story.img} alt={story.title} />
+      <p>{story.content}</p>
+    </div>
+  );
 }
 
-export default Stories;
+export default Story;
