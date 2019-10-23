@@ -42,9 +42,9 @@ export const addStory = add => dispatch => {
 
 // EDIT EXISTING STORY
 
-export const editStory = edit => dispatch => {
+export const editStory = storyInfo => dispatch => {
   axios
-    .put("https://jsonplaceholder.typicode.com/todos/id", edit)
+    .put(`https://pt11expat.herokuapp.com/api/stories/new/update/${storyInfo.id}`, storyInfo)
     .then(res => {
       dispatch({ type: EDIT_STORY, payload: res.data });
     })

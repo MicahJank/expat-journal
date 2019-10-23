@@ -551,6 +551,7 @@ button:focus {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 8px;
 }
 .upload-container-edit .upload-img-container-edit p {
   margin-top: 25px;

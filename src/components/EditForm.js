@@ -16,6 +16,12 @@ const EditForm = (props) => {
       .catch(err => console.log(err));
   }, [props.match.params.id]);
 
+
+  const submitHandler = e => {
+    e.preventDefault();
+    
+  }
+
   return (
     <section className="upload-container-edit">
       <div className="upload-top-edit">
