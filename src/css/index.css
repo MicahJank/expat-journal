@@ -412,14 +412,19 @@ button:focus {
 }
 .upload-top .radio-btns {
   display: flex;
-  width: 100%;
+  width: 60%;
+  justify-content: space-between;
   position: relative;
 }
 .upload-top .radio-btns label {
   font-size: 2rem;
+  cursor: pointer;
 }
 .upload-top .radio-btns p {
   font-size: 1.4rem;
+}
+.upload-top .radio-btns input {
+  cursor: pointer;
 }
 .upload-top .input-container {
   font-weight: 300;
