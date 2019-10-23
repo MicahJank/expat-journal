@@ -419,7 +419,26 @@ a {
   margin-bottom: 22px;
 }
 .upload-top .input-container label {
-  font-size: 2rem;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+}
+.upload-top .input-container input {
+  box-sizing: border-box;
+  height: 59px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 0.49px;
+  line-height: 33px;
+  padding-left: 12px;
+}
+.upload-top .input-container input:focus {
+  outline: none;
+  border: 1px solid #16bac5;
 }
 .upload-top .title {
   margin-top: 15px;
@@ -428,9 +447,34 @@ a {
   display: flex;
   flex-direction: column;
 }
+.upload-bottom label {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+}
+.upload-bottom input {
+  box-sizing: border-box;
+  height: 212px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 0.49px;
+  line-height: 33px;
+  padding-left: 12px;
+}
+.upload-bottom input:focus {
+  outline: none;
+  border: 1px solid #16bac5;
+}
 .upload-btns {
   display: flex;
   justify-content: flex-end;
+}
+.upload-container .edit-img-container {
+  border: 1px solid #16bac5;
 }
 .newposts {
   padding: 40px;
