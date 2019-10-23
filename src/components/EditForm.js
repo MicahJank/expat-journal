@@ -7,15 +7,15 @@ const EditForm = () => {
   // const [formInputs, handleChanges, clearForm] = useForm();
 
   return (
-    <section className="upload-container">
-      <div className="upload-top">
-        <div className="upload-img-container edit-img-container">
+    <section className="upload-container-edit">
+      <div className="upload-top-edit">
+        <div className="upload-img-container-edit edit-img-container">
           <img src={uploadImg} alt="upload" />
           <p>Upload image</p>
         </div>
 
-        <form className="upload-form">
-          <div className="radio-btns">
+        <form className="upload-form-edit">
+          <div className="radio-btns-edit">
             <div>
               <label htmlFor="private">Private post</label>
               <input type="radio" id="private" name="post-type" />
@@ -27,7 +27,7 @@ const EditForm = () => {
               <p>*All Expat Journal community can see this post.</p>
             </div>
           </div>
-          <div className="input-container title">
+          <div className="input-container-edit title-edit">
             <label>Title</label>
             <input
               type="text"
@@ -37,7 +37,7 @@ const EditForm = () => {
             />
           </div>
 
-          <div className="input-container country">
+          <div className="input-container-edit country-edit">
             <label>City/Town, State, Country</label>
             <input
               type="text"
@@ -47,7 +47,7 @@ const EditForm = () => {
             />
           </div>
 
-          <div className="input-container emoji">
+          <div className="input-container-edit emoji-edit">
             <label>Choose and Emoji for this day</label>
             <input
               type="text"
@@ -57,7 +57,7 @@ const EditForm = () => {
             />
           </div>
 
-          <div className="input-container tags">
+          <div className="input-container-edit tags-edit">
             <label>Key words/tags</label>
             <input
               type="text"
@@ -68,18 +68,18 @@ const EditForm = () => {
           </div>
         </form>
       </div>
-      <div className="upload-bottom">
+      <div className="upload-bottom-edit">
         <label>Your amazing story goes here</label>
-        <input
+        <textarea
           type="text"
           id="content"
           name="sContent"
           // value={formInputs.sContent}
         />
       </div>
-      <div className="upload-btns">
+      <div className="upload-btns-edit">
         <button type="button">Cancel</button>
-        <button type="submit">Publish</button>
+        <button type="submit">Apply Changes</button>
       </div>
     </section>
   );
