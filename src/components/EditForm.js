@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import axios from 'axios';
 
 import uploadImg from '../imgs/upload.png';
-// import useForm from '../utils/useForm.js';
+import useForm from '../utils/useForm.js';
 
-const EditForm = () => {
-  // const [formInputs, handleChanges, clearForm] = useForm();
+const EditForm = (props) => {
+  const [initialData, setInitialData] = useState({});
+  const [formInputs, handleChanges, clearForm] = useForm();
+
+  useEffect(() => {
+    axios.get(`https://pt11expat.herokuapp.com/api/stories/byId/${props.match.params.id}`)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => console.log(err));
+  }, []);
 
   return (
     <section className="upload-container-edit">
