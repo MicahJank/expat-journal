@@ -448,6 +448,10 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 4px;
 }
+.upload-top .input-container input:focus {
+  outline: none;
+  border: 1px solid #16bac5;
+}
 .upload-top .title {
   margin-top: 15px;
 }
