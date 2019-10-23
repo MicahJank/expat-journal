@@ -35,14 +35,15 @@
     display: flex;
     justify-content: space-between;
 
-    label {
-      font-size: 2rem;
+    .upload-form {
+        margin-left: 40px;
+        width: 60%;
     }
 
-    p {
-      font-size: 1.4rem;
-    }
-  }
+    .radio-btns {
+        display: flex;
+        width: 100%;
+        position: relative;
 
   .input-container {
     display: flex;
@@ -64,11 +65,55 @@
       border-radius: 8px;
       background-color: #ffffff;
 
-      font-size: 27px;
-      font-weight: 300;
-      letter-spacing: 0.49px;
-      line-height: 33px;
-      padding-left: 12px;
+    .radio {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        align-items: center;
+        input {
+            position: relative;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .circle {
+            margin-left: 10px;
+            height: 31px;	
+            width: 31px;	
+            border: 2px solid #979797;	
+            background-color: #FFFFFF;
+            border-radius: 50%;
+          }
+          
+    }
+
+
+    .input-container {
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 22px;
+
+        label {
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        input {
+            padding: 12px;
+            color: #000000;	
+            font-weight: 300;	
+            letter-spacing: 0.49px;	
+            line-height: 33px;	
+            font-size: 2.7rem;
+            height: 59px;	
+            width: 679px;	
+            border: 1px solid #000000;	
+            border-radius: 4px;
+        }
     }
 
     input:focus {
@@ -83,46 +128,30 @@
 }
 
 .upload-bottom {
-  display: flex;
-  flex-direction: column;
-
-  label {
-    //   font-size: 2rem;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
     font-weight: 300;
-    letter-spacing: 0.36px;
-    line-height: 24px;
-  }
+    font-size: 2rem;
 
-  input {
-    box-sizing: border-box;
-    height: 212px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    background-color: #ffffff;
+    label {
+        margin-bottom: 4px;
+    }
 
-    font-size: 27px;
-    font-weight: 300;
-    letter-spacing: 0.49px;
-    line-height: 33px;
-    padding-left: 12px;
-  }
+    textarea {
+        resize: none;
+        padding: 13px;
+        font-size: 2rem;
+        height: 212px;
+        border: 1px solid #000000;	
+        border-radius: 4px;
 
-  input:focus {
-    outline: none;
-    border: 1px solid #16bac5;
-  }
+        &:focus {
+            border: 1px solid #16BAC5;
+        }
+    }
 }
 
 .upload-btns {
   display: flex;
   justify-content: flex-end;
-}
-
-// LESS specifically for the EditForm below
-
-.upload-container {
-  .edit-img-container {
-    border: 1px solid #16bac5;
-  }
 }

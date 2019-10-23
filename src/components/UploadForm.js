@@ -1,11 +1,23 @@
 import React from 'react';
 
+import { addStory } from '../actions';
+import { connect } from 'react-redux';
+
 import uploadImg from '../imgs/upload.png';
+import placeholderImg from '../imgs/static.jpg';
+
 import useForm from '../utils/useForm.js';
 
-const UploadForm = () => {
-
+const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
+
+    const submitHandler = e => {
+        e.preventDefault();
+        const { sName, sContent } = formInputs;
+        props.addStory({ sName, sContent, sImageUrl: placeholderImg });
+        clearForm();
+        props.history.push('/newsfeed');
+    }
 
     return (
         <section className='upload-container'>
@@ -15,16 +27,18 @@ const UploadForm = () => {
                     <p>Upload image</p>
                 </div>
 
-                <form className='upload-form'>
+                <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                     <div className='radio-btns'>
-                        <div>
+                        <div className='radio private'>
                             <label htmlFor='private'>Private post</label>
-                            <input type="radio" id='private' name="post-type" />
+                            <span className='circle'></span>
+                            <input type="radio" id='private' value='private' name="post-type" />
                             <p>*Only you can see this post.</p>
                         </div>
-                        <div>
+                        <div className='radio public'>
                             <label htmlFor='public'>Public post</label>
-                            <input type="radio" id='public' name="post-type" />
+                            <span className='circle'></span>
+                            <input type="radio" id='public' value='public' name="post-type" />
                             <p>*All Expat Journal community can see this post.</p>
                         </div>
                     </div>
@@ -34,7 +48,9 @@ const UploadForm = () => {
                         type='text' 
                         id='title'
                         name='sName'
-                        value={formInputs.sName}
+                        required
+                        value={formInputs.sName || ''}
+                        onChange={handleChanges}
                         />
                     </div>
 
@@ -44,7 +60,8 @@ const UploadForm = () => {
                         type='text' 
                         id='location'
                         name='sCountry'
-                        value={formInputs.sCountry}
+                        value={formInputs.sCountry || ''}
+                        onChange={handleChanges}
                         />
                     </div>
 
@@ -54,7 +71,8 @@ const UploadForm = () => {
                         type='text' 
                         id='emoji'
                         name='emoji'
-                        value={formInputs.emoji}
+                        value={formInputs.emoji || ''}
+                        onChange={handleChanges}
                         />
                     </div>
 
@@ -64,7 +82,8 @@ const UploadForm = () => {
                         type='text' 
                         id='tags'
                         name='tags'
-                        value={formInputs.tags}
+                        value={formInputs.tags || ''}
+                        onChange={handleChanges}
                         />
                     </div>
 
@@ -72,19 +91,21 @@ const UploadForm = () => {
             </div>
             <div className='upload-bottom'>
                 <label>Your amazing story goes here</label>
-                    <input 
+                    <textarea 
                     type='text' 
                     id='content'
                     name='sContent'
-                    value={formInputs.sContent}
+                    required
+                    value={formInputs.sContent || ''}
+                    onChange={handleChanges}
                     />
             </div>
             <div className='upload-btns'>
                 <button type='button'>Cancel</button>
-                <button type='submit'>Publish</button>
+                <button form='upload-form' type='submit'>Publish</button>
             </div>
         </section>
     )
 }
 
-export default UploadForm;
+export default connect(null, { addStory })(UploadForm);
