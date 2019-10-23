@@ -558,3 +558,134 @@ button:focus {
   padding-left: 75px;
   line-height: 116px;
 }
+.upload-container-edit {
+  padding: 30px 40px;
+}
+.upload-container-edit .upload-img-container-edit {
+  height: 684px;
+  width: 840px;
+  border: 0.5px solid #979797;
+  border-radius: 8px;
+  background-color: rgba(235, 237, 254, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upload-container-edit .upload-img-container-edit p {
+  margin-top: 25px;
+  color: #384745;
+  font-size: 2rem;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  text-align: center;
+}
+.upload-top-edit {
+  display: flex;
+  margin-bottom: 21px;
+}
+.upload-top-edit .upload-form-edit {
+  margin-left: 40px;
+}
+.upload-top-edit .radio-btns-edit {
+  display: flex;
+  justify-content: space-between;
+}
+.upload-top-edit .radio-btns-edit label {
+  font-size: 2rem;
+  color: #515151;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+}
+.upload-top-edit .radio-btns-edit p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  line-height: 18px;
+}
+.upload-top-edit .input-container-edit {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+.upload-top-edit .input-container-edit label {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+}
+.upload-top-edit .input-container-edit input {
+  box-sizing: border-box;
+  height: 59px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 0.49px;
+  line-height: 33px;
+  padding-left: 12px;
+}
+.upload-top-edit .input-container-edit input:focus {
+  outline: none;
+  border: 1px solid #16bac5;
+}
+.upload-top-edit .title-edit {
+  margin-top: 15px;
+}
+.upload-bottom-edit {
+  display: flex;
+  flex-direction: column;
+}
+.upload-bottom-edit label {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+.upload-bottom-edit textarea {
+  box-sizing: border-box;
+  height: 212px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  resize: none;
+  padding: 13px 16px 13px 24px;
+}
+.upload-bottom-edit textarea:focus {
+  outline: none;
+  border: 1px solid #16bac5;
+}
+.upload-btns-edit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+.upload-btns-edit button {
+  height: 44px;
+  font-size: 25px;
+  letter-spacing: 0.45px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 0 30px;
+}
+.upload-btns-edit button:first-child {
+  border: 1px solid #16bac5;
+  color: #16bac5;
+  background-color: rgba(255, 255, 255, 0.46);
+  margin-right: 24px;
+}
+.upload-btns-edit button:last-child {
+  background-color: #16bac5;
+  color: #efe9f4;
+}
+.upload-container-edit .edit-img-container {
+  border: 1px solid #16bac5;
+}
