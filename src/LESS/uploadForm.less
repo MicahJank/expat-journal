@@ -2,24 +2,24 @@
   padding: 30px 40px;
 
   .upload-img-container {
-    height: 684px;
-    width: 840px;
-    border: 0.5px solid #979797;
-    border-radius: 8px;
-    background-color: rgba(235, 237, 254, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+      height: 684px;
+      width: 840px;
+      border: 0.5px solid #979797;
+      border-radius: 8px;
+      background-color: rgba(235, 237, 254, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    p {
-      margin-top: 25px;
-      color: #384745;
-      font-size: 2rem;
-      letter-spacing: 0.36px;
-      line-height: 24px;
-      text-align: center;
-    }
+      p {
+          margin-top: 25px;
+          color: #384745;
+          font-size: 2rem;
+          letter-spacing: 0.36px;
+          line-height: 24px;
+          text-align: center;
+      }
   }
 }
 
@@ -28,127 +28,103 @@
   margin-bottom: 21px;
 
   .upload-form {
-    margin-left: 40px;
+      margin-left: 40px;
+      width: 60%;
   }
 
   .radio-btns {
-    display: flex;
-    justify-content: space-between;
+      display: flex;
+      width: 100%;
+      position: relative;
 
-    .upload-form {
-        margin-left: 40px;
-        width: 60%;
-    }
+      label {
+          font-size: 2rem;
+      }
 
-    .radio-btns {
-        display: flex;
-        width: 100%;
-        position: relative;
+      p {
+          font-size: 1.4rem;
+      }
+  }
+
+
+  .radio {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 300px;
+      align-items: center;
+      input {
+          position: relative;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+      }
+
+      .circle {
+          margin-left: 10px;
+          height: 31px;	
+          width: 31px;	
+          border: 2px solid #979797;	
+          background-color: #FFFFFF;
+          border-radius: 50%;
+        }
+        
+  }
+
 
   .input-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 22px;
-
-    label {
-      //   font-size: 2rem;
-      font-size: 20px;
       font-weight: 300;
-      letter-spacing: 0.36px;
-      line-height: 24px;
-    }
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 22px;
 
-    input {
-      box-sizing: border-box;
-      height: 59px;
-      border: 1px solid #000000;
-      border-radius: 8px;
-      background-color: #ffffff;
+      label {
+          font-size: 2rem;
+          margin-bottom: 4px;
+      }
 
-    .radio {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-        align-items: center;
-        input {
-            position: relative;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        .circle {
-            margin-left: 10px;
-            height: 31px;	
-            width: 31px;	
-            border: 2px solid #979797;	
-            background-color: #FFFFFF;
-            border-radius: 50%;
-          }
-          
-    }
-
-
-    .input-container {
-        font-weight: 300;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 22px;
-
-        label {
-            font-size: 2rem;
-            margin-bottom: 4px;
-        }
-
-        input {
-            padding: 12px;
-            color: #000000;	
-            font-weight: 300;	
-            letter-spacing: 0.49px;	
-            line-height: 33px;	
-            font-size: 2.7rem;
-            height: 59px;	
-            width: 679px;	
-            border: 1px solid #000000;	
-            border-radius: 4px;
-        }
-    }
-
-    input:focus {
-      outline: none;
-      border: 1px solid #16bac5;
-    }
+      input {
+          padding: 12px;
+          color: #000000;	
+          font-weight: 300;	
+          letter-spacing: 0.49px;	
+          line-height: 33px;	
+          font-size: 2.7rem;
+          height: 59px;	
+          width: 679px;	
+          border: 1px solid #000000;	
+          border-radius: 4px;
+      }
   }
 
   .title {
-    margin-top: 15px;
+      margin-top: 15px;
   }
 }
 
 .upload-bottom {
-    display: flex;
-    flex-direction: column;
-    font-weight: 300;
-    font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 2rem;
 
-    label {
-        margin-bottom: 4px;
-    }
+  label {
+      margin-bottom: 4px;
+  }
 
-    textarea {
-        resize: none;
-        padding: 13px;
-        font-size: 2rem;
-        height: 212px;
-        border: 1px solid #000000;	
-        border-radius: 4px;
+  textarea {
+      resize: none;
+      padding: 13px;
+      font-size: 2rem;
+      height: 212px;
+      border: 1px solid #000000;	
+      border-radius: 4px;
 
-        &:focus {
-            border: 1px solid #16BAC5;
-        }
-    }
+      &:focus {
+          border: 1px solid #16BAC5;
+      }
+  }
 }
 
 .upload-btns {
