@@ -6,23 +6,21 @@ import uploadImg from '../imgs/upload.png';
 import useForm from '../utils/useForm.js';
 
 const EditForm = (props) => {
-  const [initialData, setInitialData] = useState({});
-  const [formInputs, handleChanges, clearForm] = useForm();
+  const [formInputs, handleChanges, clearForm, setFormInputs] = useForm();
 
   useEffect(() => {
     axios.get(`https://pt11expat.herokuapp.com/api/stories/byId/${props.match.params.id}`)
       .then(res => {
-        console.log(res);
+        setFormInputs(res.data);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [props.match.params.id]);
 
   return (
     <section className="upload-container-edit">
       <div className="upload-top-edit">
         <div className="upload-img-container-edit edit-img-container">
-          <img src={uploadImg} alt="upload" />
-          <p>Upload image</p>
+          <img src={formInputs.sImageUrl} alt="upload" />
         </div>
 
         <form className="upload-form-edit">
@@ -44,7 +42,8 @@ const EditForm = (props) => {
               type="text"
               id="title"
               name="sName"
-              // value={formInputs.sName}
+              value={formInputs.sName || ''}
+              onChange={handleChanges}
             />
           </div>
 
@@ -54,7 +53,8 @@ const EditForm = (props) => {
               type="text"
               id="location"
               name="sCountry"
-              // value={formInputs.sCountry}
+              value={formInputs.sCountry || ''}
+              onChange={handleChanges}
             />
           </div>
 
@@ -64,7 +64,8 @@ const EditForm = (props) => {
               type="text"
               id="emoji"
               name="emoji"
-              // value={formInputs.emoji}
+              value={formInputs.emoji || ''}
+              onChange={handleChanges}
             />
           </div>
 
@@ -74,7 +75,8 @@ const EditForm = (props) => {
               type="text"
               id="tags"
               name="tags"
-              //  value={formInputs.tags}
+              value={formInputs.tags || ''}
+              onChange={handleChanges}
             />
           </div>
         </form>
@@ -85,7 +87,8 @@ const EditForm = (props) => {
           type="text"
           id="content"
           name="sContent"
-          // value={formInputs.sContent}
+          value={formInputs.sContent || ''}
+          onChange={handleChanges}
         />
       </div>
       <div className="upload-btns-edit">
