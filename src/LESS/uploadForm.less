@@ -1,71 +1,128 @@
 .upload-container {
-    padding: 30px 40px;
+  padding: 30px 40px;
 
-    .upload-img-container {
-        height: 684px;
-        width: 840px;
-        border: 0.5px solid #979797;
-        border-radius: 8px;
-        background-color: rgba(235, 237, 254, 0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  .upload-img-container {
+    height: 684px;
+    width: 840px;
+    border: 0.5px solid #979797;
+    border-radius: 8px;
+    background-color: rgba(235, 237, 254, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        p {
-            margin-top: 25px;
-            color: #384745;
-            font-size: 2rem;
-            letter-spacing: 0.36px;
-            line-height: 24px;
-            text-align: center;
-        }
+    p {
+      margin-top: 25px;
+      color: #384745;
+      font-size: 2rem;
+      letter-spacing: 0.36px;
+      line-height: 24px;
+      text-align: center;
     }
+  }
 }
 
 .upload-top {
+  display: flex;
+  margin-bottom: 21px;
+
+  .upload-form {
+    margin-left: 40px;
+  }
+
+  .radio-btns {
     display: flex;
-    margin-bottom: 21px;
+    justify-content: space-between;
 
-    .upload-form {
-        margin-left: 40px;
+    label {
+      font-size: 2rem;
     }
 
-    .radio-btns {
-        display: flex;
-        justify-content: space-between;
+    p {
+      font-size: 1.4rem;
+    }
+  }
 
-        label {
-            font-size: 2rem;
-        }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
 
-        p {
-            font-size: 1.4rem;
-        }
+    label {
+      //   font-size: 2rem;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.36px;
+      line-height: 24px;
     }
 
+    input {
+      box-sizing: border-box;
+      height: 59px;
+      border: 1px solid #000000;
+      border-radius: 8px;
+      background-color: #ffffff;
 
-    .input-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 22px;
-
-        label {
-            font-size: 2rem;
-        }
+      font-size: 27px;
+      font-weight: 300;
+      letter-spacing: 0.49px;
+      line-height: 33px;
+      padding-left: 12px;
     }
 
-    .title {
-        margin-top: 15px;
+    input:focus {
+      outline: none;
+      border: 1px solid #16bac5;
     }
+  }
+
+  .title {
+    margin-top: 15px;
+  }
 }
 
 .upload-bottom {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    //   font-size: 2rem;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.36px;
+    line-height: 24px;
+  }
+
+  input {
+    box-sizing: border-box;
+    height: 212px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #ffffff;
+
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 0.49px;
+    line-height: 33px;
+    padding-left: 12px;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid #16bac5;
+  }
 }
 
 .upload-btns {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// LESS specifically for the EditForm below
+
+.upload-container {
+  .edit-img-container {
+    border: 1px solid #16bac5;
+  }
 }
