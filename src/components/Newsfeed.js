@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStories } from "../actions";
-import { Link } from "react-router-dom"
+import { Route, Link } from 'react-router-dom';
 
 class NewsFeed extends Component {
   componentDidMount() {
@@ -15,10 +15,13 @@ class NewsFeed extends Component {
           <div className="allstories">
             {this.props.stories.map(story => {
               return (
+                  <>
                 <div id={story.id} className="singlestory">
-                <Link to="/"> <img src={story.sImageUrl} />
+                <Link to={`/users/${this.props.match.params.id}`}> <img src={story.sImageUrl} />
                   <h1>{story.sName}</h1></Link> 
                 </div>
+                    <Route path="/users/:id" />
+                    </>
               );
             })}
           </div>

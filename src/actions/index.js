@@ -31,7 +31,7 @@ export const addStory = add => dispatch => {
   dispatch({ type: ADD_STORY });
 
   axios
-    .post("https://jsonplaceholder.typicode.com/todos/1", add)
+    .post("https://pt11expat.herokuapp.com/api/stories/new/", add)
     .then(res => {
       dispatch({ type: ADD_STORY_SUCCESS, payload: res.data });
     })

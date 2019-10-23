@@ -18,8 +18,6 @@ function App() {
         <Route exact path="/sign-in" component={LoginPage} />
         <Route exact path="/sign-up" component={SignUpPage} />
         <Route path="/" component={NavigationBar} />
-        <Route path="/upload" component={UploadForm} />
-        <Route path="/edit" component={EditForm} />
         <Route path="/newsfeed" />
       </Switch>
     </div>
