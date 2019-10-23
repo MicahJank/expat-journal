@@ -29,13 +29,15 @@ const UploadForm = (props) => {
 
                 <form id='upload-form' onSubmit={submitHandler} className='upload-form'>
                     <div className='radio-btns'>
-                        <div>
+                        <div className='radio private'>
                             <label htmlFor='private'>Private post</label>
+                            <span className='circle'></span>
                             <input type="radio" id='private' value='private' name="post-type" />
                             <p>*Only you can see this post.</p>
                         </div>
-                        <div>
+                        <div className='radio public'>
                             <label htmlFor='public'>Public post</label>
+                            <span className='circle'></span>
                             <input type="radio" id='public' value='public' name="post-type" />
                             <p>*All Expat Journal community can see this post.</p>
                         </div>
@@ -89,7 +91,7 @@ const UploadForm = (props) => {
             </div>
             <div className='upload-bottom'>
                 <label>Your amazing story goes here</label>
-                    <input 
+                    <textarea 
                     type='text' 
                     id='content'
                     name='sContent'

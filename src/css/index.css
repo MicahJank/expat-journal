@@ -136,6 +136,12 @@ html {
 a {
   font-size: 2rem;
 }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
 .navigation-bar {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
@@ -402,10 +408,12 @@ a {
 }
 .upload-top .upload-form {
   margin-left: 40px;
+  width: 60%;
 }
 .upload-top .radio-btns {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  position: relative;
 }
 .upload-top .radio-btns label {
   font-size: 2rem;
@@ -413,13 +421,49 @@ a {
 .upload-top .radio-btns p {
   font-size: 1.4rem;
 }
+.upload-top .radio {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  align-items: center;
+}
+.upload-top .radio input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.upload-top .radio .circle {
+  margin-left: 10px;
+  height: 31px;
+  width: 31px;
+  border: 2px solid #979797;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
 .upload-top .input-container {
+  font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
 }
 .upload-top .input-container label {
   font-size: 2rem;
+  margin-bottom: 4px;
+}
+.upload-top .input-container input {
+  padding: 12px;
+  color: #000000;
+  font-weight: 300;
+  letter-spacing: 0.49px;
+  line-height: 33px;
+  font-size: 2.7rem;
+  height: 59px;
+  width: 679px;
+  border: 1px solid #000000;
+  border-radius: 4px;
 }
 .upload-top .title {
   margin-top: 15px;
@@ -427,6 +471,22 @@ a {
 .upload-bottom {
   display: flex;
   flex-direction: column;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.upload-bottom label {
+  margin-bottom: 4px;
+}
+.upload-bottom textarea {
+  resize: none;
+  padding: 13px;
+  font-size: 2rem;
+  height: 212px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+.upload-bottom textarea:focus {
+  border: 1px solid #16BAC5;
 }
 .upload-btns {
   display: flex;
