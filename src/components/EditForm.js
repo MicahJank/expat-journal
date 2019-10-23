@@ -1,10 +1,10 @@
 import React from 'react';
 
 import uploadImg from '../imgs/upload.png';
-// import useForm from '../utils/useForm.js';
+import useForm from '../utils/useForm.js';
 
 const EditForm = () => {
-  // const [formInputs, handleChanges, clearForm] = useForm();
+  const [formInputs, handleChanges, clearForm] = useForm();
 
   return (
     <section className="upload-container">
