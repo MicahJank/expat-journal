@@ -43,12 +43,15 @@ export const addStory = add => dispatch => {
 // EDIT EXISTING STORY
 
 export const editStory = storyInfo => dispatch => {
+  dispatch({ type: FETCH_STORY_START });
   axios
-    .put(`https://pt11expat.herokuapp.com/api/stories/new/update/${storyInfo.id}`, storyInfo)
+    .put(`https://pt11expat.herokuapp.com/api/stories/update/${storyInfo.id}`, storyInfo)
     .then(res => {
-      dispatch({ type: EDIT_STORY, payload: res.data });
+      dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      dispatch({ type: FETCH_STORY_ERROR, payload: err })
+    });
 };
 
 // DELETE EXISTING STORY

@@ -3,7 +3,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import uploadImg from '../imgs/upload.png';
+import { editStory } from '../actions';
 import useForm from '../utils/useForm.js';
+
+import { connect } from 'react-redux';
 
 const EditForm = (props) => {
   const [formInputs, handleChanges, clearForm, setFormInputs] = useForm();
@@ -19,7 +22,10 @@ const EditForm = (props) => {
 
   const submitHandler = e => {
     e.preventDefault();
-    
+    console.log(formInputs);
+    props.editStory(formInputs);
+    clearForm();
+    props.history.push('/newsfeed');
   }
 
   return (
@@ -29,7 +35,7 @@ const EditForm = (props) => {
           <img src={formInputs.sImageUrl} alt="upload" />
         </div>
 
-        <form className="upload-form-edit">
+        <form id='edit-form' onSubmit={submitHandler} className="upload-form-edit">
           <div className="radio-btns-edit">
             <div>
               <label htmlFor="private">Private post</label>
@@ -99,10 +105,10 @@ const EditForm = (props) => {
       </div>
       <div className="upload-btns-edit">
         <button type="button">Cancel</button>
-        <button type="submit">Apply Changes</button>
+        <button form='edit-form' type="submit">Apply Changes</button>
       </div>
     </section>
   );
 };
 
-export default EditForm;
+export default connect(null, { editStory })(EditForm);
