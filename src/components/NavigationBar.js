@@ -20,7 +20,7 @@ const NavigationBar = () => {
         <div className='navigation-bar'>
             <div className='nav-top'>
                 <img src={logo} alt='expat journal logo' />
-                <NavLink to={'/profile'}>UserName</NavLink>
+                <NavLink to={'/profile'}>{localStorage.getItem('username') || 'User'}</NavLink>
             </div>
             <div className='nav-bottom'>
                 <div className='link-container'>
