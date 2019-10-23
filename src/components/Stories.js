@@ -1,41 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-class Story extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      user: []
-    };
-  }
+function Story() {
+  const [trip, setTrip] = useState([]);
 
-  componentDidMount() {
-    fetch("https://pt11expat.herokuapp.com/api/stories/byId/1")
-      .then(res => 
-         this.setState({ user: res.data }))
+  useEffect(() => {
+    axios
+      .get(`https://pt11expat.herokuapp.com/api/stories/byId/2`)
+      .then(res => {
+        setTrip(res.data);
+        console.log(res.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
 
-      .catch(err => console.log(err));
-  }
+  return (
+    <>
+      <div className="userstory">
+        <div className="usertripinfo">
+          <img src={trip.sImageUrl} alt={trip.sName} />
+        </div>
 
-  render() {
-    return (
-      <>
-        {this.state.user.map(x => {
-          return (
-            <>
-                  
-              <div id={x.id}>
-                      <h1>{x.sName}</h1>
-                      
-                <img src={x.sImageUrl} alt={x.sName} />
-                      <p>{x.sContent}</p>
-                    
-              </div>
-            </>
-          );
-        })}
-      </>
-    );
-  }
+        <div className="usertripinfo">
+          <h1>{trip.sName}</h1>
+
+          <p>{trip.sContent}</p>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Story;
