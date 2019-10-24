@@ -371,35 +371,71 @@ button:focus {
 }
 .upload-top .upload-form {
   margin-left: 40px;
-  width: 60%;
 }
 .upload-top .radio-btns {
   display: flex;
-  width: 60%;
   justify-content: space-between;
+}
+.upload-top .radio-btns .upload-form {
+  margin-left: 40px;
+  width: 60%;
+}
+.upload-top .radio-btns .radio-btns {
+  display: flex;
+  width: 100%;
   position: relative;
 }
-.upload-top .radio-btns label {
-  font-size: 2rem;
+.upload-top .radio-btns .radio-btns .input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+.upload-top .radio-btns .radio-btns .input-container label {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+}
+.upload-top .radio-btns .radio-btns .input-container input {
+  box-sizing: border-box;
+  height: 59px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+.upload-top .radio-btns .radio-btns .input-container input .radio {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  align-items: center;
+}
+.upload-top .radio-btns .radio-btns .input-container input .radio input {
+  position: relative;
+  opacity: 0;
   cursor: pointer;
+  height: 0;
+  width: 0;
 }
-.upload-top .radio-btns p {
-  font-size: 1.4rem;
+.upload-top .radio-btns .radio-btns .input-container input .radio .circle {
+  margin-left: 10px;
+  height: 31px;
+  width: 31px;
+  border: 2px solid #979797;
+  background-color: #FFFFFF;
+  border-radius: 50%;
 }
-.upload-top .radio-btns input {
-  cursor: pointer;
-}
-.upload-top .input-container {
+.upload-top .radio-btns .radio-btns .input-container input .input-container {
   font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
 }
-.upload-top .input-container label {
+.upload-top .radio-btns .radio-btns .input-container input .input-container label {
   font-size: 2rem;
   margin-bottom: 4px;
 }
-.upload-top .input-container input {
+.upload-top .radio-btns .radio-btns .input-container input .input-container input {
   padding: 12px;
   color: #000000;
   font-weight: 300;
@@ -411,23 +447,23 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 4px;
 }
-.upload-top .input-container input:focus {
+.upload-top .radio-btns .radio-btns .input-container input input:focus {
   outline: none;
   border: 1px solid #16bac5;
 }
-.upload-top .title {
+.upload-top .radio-btns .radio-btns .input-container .title {
   margin-top: 15px;
 }
-.upload-bottom {
+.upload-top .radio-btns .radio-btns .upload-bottom {
   display: flex;
   flex-direction: column;
   font-weight: 300;
   font-size: 2rem;
 }
-.upload-bottom label {
+.upload-top .radio-btns .radio-btns .upload-bottom label {
   margin-bottom: 4px;
 }
-.upload-bottom textarea {
+.upload-top .radio-btns .radio-btns .upload-bottom textarea {
   resize: none;
   padding: 13px;
   font-size: 2rem;
@@ -435,15 +471,17 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 4px;
 }
-.upload-bottom textarea:focus {
+.upload-top .radio-btns .radio-btns .upload-bottom textarea:focus {
   border: 1px solid #16BAC5;
 }
-.upload-btns {
+.upload-top .radio-btns .radio-btns .upload-btns {
   display: flex;
   justify-content: flex-end;
 }
 .userstory {
   display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .userstory .usertripinfo {
   margin: 20px;
@@ -452,7 +490,8 @@ button:focus {
   font-size: 30px;
 }
 .userstory .usertripinfo img {
-  max-width: 200px;
+  border-radius: 20px;
+  max-width: 500px;
 }
 .newposts {
   padding: 40px;
