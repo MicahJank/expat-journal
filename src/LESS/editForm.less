@@ -2,8 +2,7 @@
   padding: 30px 40px;
 
   .upload-img-container-edit {
-    height: 684px;
-    width: 840px;
+    width: 37%;
     border: 0.5px solid #979797;
     border-radius: 8px;
     background-color: rgba(235, 237, 254, 0.5);
@@ -36,6 +35,10 @@
 
   .upload-form-edit {
     margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
   }
 
   .radio-btns-edit {
@@ -63,6 +66,10 @@
     flex-direction: column;
     margin-bottom: 22px;
 
+    &:last-child {
+      margin-bottom: 0; 
+ }
+
     label {
       //   font-size: 2rem;
       font-size: 20px;
@@ -77,6 +84,7 @@
       border: 1px solid #000000;
       border-radius: 8px;
       background-color: #ffffff;
+      width: 100%;
 
       font-size: 27px;
       font-weight: 300;
