@@ -57,11 +57,14 @@ export const editStory = storyInfo => dispatch => {
 
 // DELETE EXISTING STORY
 
-export const deleteStory = del => dispatch => {
+export const deleteStory = id => dispatch => {
+  dispatch({ type: FETCH_STORY_START });
   axios
-    .delete("https://jsonplaceholder.typicode.com/todos/id", del)
+    .delete(`https://pt11expat.herokuapp.com/api/stories/delete/${id}`)
     .then(res => {
-      dispatch({ type: DELETE_STORY, payload: res.data });
+      dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      dispatch({ type: FETCH_STORY_ERROR, payload: err })
+    });
 }; 
