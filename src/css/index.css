@@ -244,6 +244,7 @@ button:focus {
   height: 48px;
   width: 182px;
   border-radius: 4px;
+  border: none;
   background-color: #16bac5;
   color: #efe9f4;
   font-size: 25px;
@@ -362,6 +363,10 @@ button:focus {
 }
 .auth-page .auth-right .auth-form .sign-in-rectangle {
   color: #16bac5;
+}
+.auth-page .auth-right .auth-form .filled {
+  background-color: #16BAC5;
+  color: white;
 }
 .upload-container {
   padding: 30px 40px;
