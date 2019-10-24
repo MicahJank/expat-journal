@@ -13,14 +13,14 @@ import Footer from './components/Footer.js';
 
 function App() {
   return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/sign-in" component={LoginPage} />
-        <Route exact path="/sign-up" component={SignUpPage} />
-        <PrivateRoute path="/" component={NavigationBar} />
-      </Switch>
+      <div className="App">
+        <Switch>
+          <Route exact path="/sign-in" component={LoginPage} />
+          <Route exact path="/sign-up" component={SignUpPage} />
+          <PrivateRoute path="/" component={NavigationBar} />
+        </Switch>
       <Route path="/" component={Footer} />
-    </div>
+      </div>
   );
 }
 

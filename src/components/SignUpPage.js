@@ -28,7 +28,7 @@ export default function SignUpPage(props) {
   }
 
   return (
-    <div className="auth-page">
+    <div className="auth-page main">
       <div className="auth-column auth-left">
         <img className="auth-logo" src={logo} alt="expat journal logo" />
       </div>

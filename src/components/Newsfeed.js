@@ -9,7 +9,7 @@ class NewsFeed extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='main'>
         <div className="newposts">New posts from all Expats </div>
         <div className="allstories">
           {this.props.stories.map(story => {

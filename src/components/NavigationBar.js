@@ -17,7 +17,7 @@ const NavigationBar = () => {
 
     return (
         <>
-        <div className='navigation-bar'>
+        <div className='navigation-bar header'>
             <div className='nav-top'>
                 <img src={logo} alt='expat journal logo' />
                 <NavLink to={'/profile'}>{localStorage.getItem('username') || 'User'}</NavLink>
