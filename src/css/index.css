@@ -442,6 +442,18 @@ button:focus {
   display: flex;
   justify-content: flex-end;
 }
+.userstory {
+  display: flex;
+}
+.userstory .usertripinfo {
+  margin: 20px;
+}
+.userstory .usertripinfo h1 {
+  font-size: 30px;
+}
+.userstory .usertripinfo img {
+  max-width: 200px;
+}
 .newposts {
   padding: 40px;
   text-decoration: underline;
