@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { axiosWithAuth } from "../utils/axiosWIthAuth";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { axiosWithAuth } from '../utils/axiosWIthAuth';
 
 // import imgs
-import logo from "../imgs/LogoEJ.png";
-import group from "../imgs/group-svgrepo-com.png";
-import uploader from "../imgs/icon-uploader-2.png";
-import save from "../imgs/save-button-2.png";
+import logo from '../imgs/LogoEJ.png';
+// import group from '../imgs/group-svgrepo-com.png';
+// import uploader from '../imgs/icon-uploader-2.png';
+// import save from '../imgs/save-button-2.png';
 
 class LoginPage extends React.Component {
   state = {
     credentials: {
-      username: "",
-      password: ""
+      username: '',
+      password: ''
     }
   };
 
@@ -28,9 +28,10 @@ class LoginPage extends React.Component {
   login = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/users/login", this.state.credentials)
+      .post('/users/login', this.state.credentials)
       .then(res => {
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem('username', this.state.credentials.username);
         this.props.history.push("/newsfeed");
       })
       .catch(err => console.log(err));
@@ -39,7 +40,53 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className="auth-page">
-        <div className="hero-section">
+        <div className="auth-column auth-left">
+          <img className="auth-logo" src={logo} alt="expat journal logo" />
+        </div>
+        <div className="auth-column auth-right">
+          <Link to="/sign-up">
+            <button className="auth-nav-bar-sign-in">Sign up</button>
+          </Link>
+          <h1>Expat Journal</h1>
+          <h3>Experiences to remember and share</h3>
+
+          <div className="auth-form">
+            <h2>Welcome back!</h2>
+
+            <form onSubmit={this.login}>
+              <input
+                type="text"
+                name="username"
+                placeholder="Name"
+                value={this.state.credentials.username}
+                onChange={this.handleChange}
+                required
+              ></input>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={this.state.credentials.password}
+                onChange={this.handleChange}
+                required
+              ></input>
+              <button
+                type="submit"
+                className="submit-rectangle sign-in-rectangle"
+              >
+                Sign in
+              </button>
+            </form>
+
+            <h4>
+              New to Expat Journal? <Link to="/sign-up">Sign up</Link> here!
+            </h4>
+          </div>
+        </div>
+
+        {/* old code below!!! */}
+
+        {/* <div className="hero-section">
           <div className="auth-nav-bar">
             <img src={logo} alt="expat journal logo" />
             <button className="auth-nav-bar-sign-in" disabled>
@@ -49,32 +96,6 @@ class LoginPage extends React.Component {
 
           <h1>Expat Journal</h1>
           <h3>Experiences to remember and share</h3>
-        </div>
-
-        <div className="auth-form">
-          <h2>Welcome back!</h2>
-
-          <form onSubmit={this.login}>
-            <input type="text" name="username" placeholder="Name" value={this.state.credentials.username} onChange={this.handleChange} required></input>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={this.state.credentials.password}
-              onChange={this.handleChange}
-              required
-            ></input>
-            <button
-              type="submit"
-              className="submit-rectangle sign-in-rectangle"
-            >
-              Sign in
-            </button>
-          </form>
-
-          <h4>
-            New to Expat Journal? <Link to="/sign-up">Sign up</Link> here!
-          </h4>
         </div>
 
         <div className="auth-bottom-section">
@@ -103,7 +124,7 @@ class LoginPage extends React.Component {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

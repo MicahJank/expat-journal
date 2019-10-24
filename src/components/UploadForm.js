@@ -31,14 +31,14 @@ const UploadForm = (props) => {
                     <div className='radio-btns'>
                         <div className='radio private'>
                             <label htmlFor='private'>Private post</label>
+                            <input type="radio" id='private' value='private' name="post-type1" />
                             <span className='circle'></span>
-                            <input type="radio" id='private' value='private' name="post-type" />
                             <p>*Only you can see this post.</p>
                         </div>
                         <div className='radio public'>
                             <label htmlFor='public'>Public post</label>
+                            <input type="radio" id='public' value='public' name="post-type1" />
                             <span className='circle'></span>
-                            <input type="radio" id='public' value='public' name="post-type" />
                             <p>*All Expat Journal community can see this post.</p>
                         </div>
                     </div>

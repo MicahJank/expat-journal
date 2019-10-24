@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import useForm from '../utils/useForm.js';
 import axios from 'axios';
 
 // import imgs
 import logo from '../imgs/LogoEJ.png';
-import group from '../imgs/group-svgrepo-com.png';
-import uploader from '../imgs/icon-uploader-2.png';
-import save from '../imgs/save-button-2.png';
+// import group from '../imgs/group-svgrepo-com.png';
+// import uploader from '../imgs/icon-uploader-2.png';
+// import save from '../imgs/save-button-2.png';
 
 export default function SignUpPage(props) {
   const [formInfo, handleChanges, clearForm] = useForm();
@@ -15,10 +16,10 @@ export default function SignUpPage(props) {
   const submitHandler = e => {
     e.preventDefault();
       const {username, password} = formInfo;
-
       axios.post(`https://pt11expat.herokuapp.com/api/users/register`, { username, password})
-        .then(res => {
-          localStorage.setItem('token', res.data.token);
+      .then(res => {
+        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('username', username);
           props.history.push('/newsfeed');
         })
         .catch(err => console.log(err));
@@ -28,7 +29,78 @@ export default function SignUpPage(props) {
 
   return (
     <div className="auth-page">
-      <div className="hero-section">
+      <div className="auth-column auth-left">
+        <img className="auth-logo" src={logo} alt="expat journal logo" />
+      </div>
+
+      <div className="auth-column auth-right">
+        <Link to="/sign-in">
+          <button className="auth-nav-bar-sign-in">Sign in</button>
+        </Link>
+        <h1>Expat Journal</h1>
+        <h3>Experiences to remember and share</h3>
+
+        <div className="auth-form">
+          <h2>Sign up to start your journal</h2>
+
+          <form onSubmit={submitHandler}>
+            <input
+              className={formInfo.error ? 'error' : ''}
+              type="text"
+              name="username"
+              placeholder="Name"
+              value={formInfo.username || ''}
+              onChange={handleChanges}
+              required
+            />
+
+            <input
+              className={formInfo.error ? 'error' : ''}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formInfo.email || ''}
+              onChange={handleChanges}
+              required
+            />
+
+            <input
+              className={formInfo.error ? 'error' : ''}
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={formInfo.password || ''}
+              onChange={handleChanges}
+              required
+            />
+
+            <input
+              className={formInfo.error ? 'error' : ''}
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={formInfo.confirmPassword || ''}
+              onChange={handleChanges}
+              required
+            />
+
+            <button
+              type="submit"
+              className="submit-rectangle sign-in-rectangle"
+            >
+              Join now
+            </button>
+          </form>
+
+          <h4 className="auth-extra-sign-in-header">
+            Already have an account? <Link to="/sign-in">Sign in</Link> here!
+          </h4>
+        </div>
+      </div>
+
+      {/* old code below! */}
+
+      {/* <div className="hero-section">
         <div className="auth-nav-bar">
           <img src={logo} alt="expat journal logo" />
           <button className="auth-nav-bar-sign-in" disabled>
@@ -38,55 +110,9 @@ export default function SignUpPage(props) {
 
         <h1>Expat Journal</h1>
         <h3>Experiences to remember and share</h3>
-      </div>
+      </div> */}
 
-      <div className="auth-form">
-        <h2>Sign up to start your journal</h2>
-
-        <form onSubmit={submitHandler}>
-
-          <input className={formInfo.error ? 'error' : ''} 
-          type="text" 
-          name="username" 
-          placeholder="Name"
-          value={formInfo.username || ''}
-          onChange={handleChanges} 
-          required />
-
-          <input className={formInfo.error ? 'error' : ''} 
-          type="email" 
-          name="email" 
-          placeholder="Email"
-          value={formInfo.email || ''}
-          onChange={handleChanges} 
-          required />
-
-          <input className={formInfo.error ? 'error' : ''}
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formInfo.password || ''}
-            onChange={handleChanges}
-            required
-          />
-
-          <input className={formInfo.error ? 'error' : ''}
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            value={formInfo.confirmPassword || ''}
-            onChange={handleChanges}
-            required
-          />
-
-          <button type="submit" className="submit-rectangle">
-            Join now
-          </button>
-
-        </form>
-      </div>
-
-      <div className="auth-bottom-section">
+      {/* <div className="auth-bottom-section">
         <h2>About Expat Journal</h2>
 
         <div className="auth-bottom-section-img-row">
@@ -112,7 +138,7 @@ export default function SignUpPage(props) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

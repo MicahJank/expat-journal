@@ -16,7 +16,7 @@ const useForm = () => {
         setState({});
     }
 
-    return [state, handleChange, clearForm];
+    return [state, handleChange, clearForm, setState];
 }
 
 export default useForm;
