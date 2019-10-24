@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { addStory } from '../actions';
 import { connect } from 'react-redux';
@@ -10,7 +10,7 @@ import useForm from '../utils/useForm.js';
 
 const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
-    const user = localStorage.getItem('username');
+    const user = localStorage.getItem('username');;
 
     const submitHandler = e => {
         e.preventDefault(); 
