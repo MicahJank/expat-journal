@@ -371,6 +371,9 @@ button:focus {
 .upload-top .upload-form {
   margin-left: 40px;
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .upload-top .radio-btns {
   display: flex;
@@ -500,8 +503,7 @@ button:focus {
   padding: 30px 40px;
 }
 .upload-container-edit .upload-img-container-edit {
-  height: 684px;
-  width: 840px;
+  width: 37%;
   border: 0.5px solid #979797;
   border-radius: 8px;
   background-color: rgba(235, 237, 254, 0.5);
@@ -530,6 +532,10 @@ button:focus {
 }
 .upload-top-edit .upload-form-edit {
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
 }
 .upload-top-edit .radio-btns-edit {
   display: flex;
@@ -553,6 +559,9 @@ button:focus {
   flex-direction: column;
   margin-bottom: 22px;
 }
+.upload-top-edit .input-container-edit:last-child {
+  margin-bottom: 0;
+}
 .upload-top-edit .input-container-edit label {
   font-size: 20px;
   font-weight: 300;
@@ -565,6 +574,7 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 8px;
   background-color: #ffffff;
+  width: 100%;
   font-size: 27px;
   font-weight: 300;
   letter-spacing: 0.49px;
