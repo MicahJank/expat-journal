@@ -8,8 +8,7 @@ import { Route, Switch } from 'react-router-dom';
 // of attaching it to a route via the component property i have imported it here
 // and am rendering it regardless of the route.
 import NavigationBar from './components/NavigationBar.js';
-import UploadForm from './components/UploadForm.js';
-import EditForm from './components/EditForm.js';
+import Footer from './components/Footer.js';
 
 function App() {
   return (
@@ -18,8 +17,8 @@ function App() {
         <Route exact path="/sign-in" component={LoginPage} />
         <Route exact path="/sign-up" component={SignUpPage} />
         <Route path="/" component={NavigationBar} />
-        <Route path="/newsfeed" />
       </Switch>
+      <Route path="/" component={Footer} />
     </div>
   );
 }
