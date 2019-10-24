@@ -448,6 +448,8 @@ button:focus {
 }
 .userstory {
   display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 .userstory .usertripinfo {
   margin: 20px;
@@ -456,7 +458,50 @@ button:focus {
   font-size: 30px;
 }
 .userstory .usertripinfo img {
-  max-width: 200px;
+  border-radius: 20px;
+  max-width: 500px;
+}
+.headoftrip {
+  max-width: 1300px;
+  display: flex;
+  margin: 0 auto;
+  height: 40px;
+  height: 100px;
+}
+.headoftrip .headbox {
+  width: 970px;
+}
+.headoftrip .headbox button {
+  display: inline-block;
+  color: #EFE9F4;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 120px;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  background-color: #16BAC5;
+}
+.headoftrip .headbox .trash {
+  margin: 0;
+  display: inline-block;
+  width: 28px;
+}
+.trip-title {
+  margin: 30px;
+  text-align: left;
+}
+.trip-edit {
+  margin: 30px;
+  text-align: right;
+  color: white;
+}
+.upvotes {
+  text-align: right;
+  padding: 30px;
 }
 .newposts {
   padding: 40px;

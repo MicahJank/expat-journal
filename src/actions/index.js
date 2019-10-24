@@ -7,7 +7,9 @@ export const ADD_STORY = "ADD_STORY";
 export const ADD_STORY_SUCCESS = "ADD_STORY_SUCCESS";
 export const ADD_STORY_FAIL = "ADD_STORY_FAIL";
 export const EDIT_STORY = "EDIT_STORY";
-export const DELETE_STORY = "DELETE_STORY";
+export const DELETE_STORY_START = "DELETE_STORY_START";
+export const DELETE_STORY_SUCCESS = "DELETE_STORY_SUCCESS";
+export const DELETE_STORY_ERROR = "DELETE_STORY_ERROR";
 
 // FETCH STORIES FROM API
 
@@ -58,13 +60,15 @@ export const editStory = storyInfo => dispatch => {
 // DELETE EXISTING STORY
 
 export const deleteStory = id => dispatch => {
-  dispatch({ type: FETCH_STORY_START });
+  console.log('deleteStory')
+  dispatch({ type: DELETE_STORY_START });
   axios
     .delete(`https://pt11expat.herokuapp.com/api/stories/delete/${id}`)
     .then(res => {
+
       dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      dispatch({ type: FETCH_STORY_ERROR, payload: err })
+      dispatch({ type: DELETE_STORY_ERROR, payload: err })
     });
 }; 
