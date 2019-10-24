@@ -30,8 +30,9 @@ class LoginPage extends React.Component {
     axiosWithAuth()
       .post('/users/login', this.state.credentials)
       .then(res => {
-        localStorage.setItem('token', res.data.token);
-        this.props.history.push('/newsfeed');
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem('username', this.state.credentials.username);
+        this.props.history.push("/newsfeed");
       })
       .catch(err => console.log(err));
   };

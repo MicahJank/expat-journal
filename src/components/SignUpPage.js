@@ -15,21 +15,17 @@ export default function SignUpPage(props) {
 
   const submitHandler = e => {
     e.preventDefault();
-    const { username, password } = formInfo;
-
-    axios
-      .post(`https://pt11expat.herokuapp.com/api/users/register`, {
-        username,
-        password
-      })
+      const {username, password} = formInfo;
+      axios.post(`https://pt11expat.herokuapp.com/api/users/register`, { username, password})
       .then(res => {
         localStorage.setItem('token', res.data.token);
-        props.history.push('/newsfeed');
-      })
-      .catch(err => console.log(err));
+        localStorage.setItem('username', username);
+          props.history.push('/newsfeed');
+        })
+        .catch(err => console.log(err));
 
-    clearForm();
-  };
+      clearForm();
+  }
 
   return (
     <div className="auth-page">

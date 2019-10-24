@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const useForm = (initialState = {}) => {
-    const [state, setState] = useState(initialState);
+const useForm = () => {
+    const [state, setState] = useState({});
 
     const handleChange = e => {
         e.persist();
@@ -16,7 +16,7 @@ const useForm = (initialState = {}) => {
         setState({});
     }
 
-    return [state, handleChange, clearForm];
+    return [state, handleChange, clearForm, setState];
 }
 
 export default useForm;

@@ -42,13 +42,16 @@ export const addStory = add => dispatch => {
 
 // EDIT EXISTING STORY
 
-export const editStory = edit => dispatch => {
+export const editStory = storyInfo => dispatch => {
+  dispatch({ type: FETCH_STORY_START });
   axios
-    .put("https://jsonplaceholder.typicode.com/todos/id", edit)
+    .put(`https://pt11expat.herokuapp.com/api/stories/update/${storyInfo.id}`, storyInfo)
     .then(res => {
-      dispatch({ type: EDIT_STORY, payload: res.data });
+      dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      dispatch({ type: FETCH_STORY_ERROR, payload: err })
+    });
 };
 
 // DELETE EXISTING STORY
