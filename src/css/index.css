@@ -343,44 +343,6 @@ button:focus {
 .auth-page .auth-right .auth-form .sign-in-rectangle {
   color: #16bac5;
 }
-<<<<<<< HEAD
-.auth-page .auth-bottom-section {
-  background: white;
-  margin-bottom: 80px;
-}
-.auth-page .auth-bottom-section h2 {
-  height: 37px;
-  width: 332px;
-  color: #65817d;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 0.55px;
-  line-height: 37px;
-  text-align: center;
-  margin: 0 auto 45px auto;
-  padding: 100px 0 45px 0;
-}
-.auth-page .auth-bottom-section .auth-bottom-section-img-row {
-  display: flex;
-  justify-content: space-evenly;
-}
-.auth-page .auth-bottom-section .auth-bottom-section-img-row div img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.auth-page .auth-bottom-section .auth-bottom-section-img-row p {
-  text-align: center;
-  max-width: 290px;
-  margin-top: 16px;
-  color: #171d1c;
-  font-size: 20px;
-  font-weight: 300;
-  letter-spacing: 0.36px;
-  line-height: 24px;
-}
-.userstory {
-=======
 .upload-container {
   padding: 30px 40px;
 }
@@ -404,20 +366,9 @@ button:focus {
   text-align: center;
 }
 .upload-top {
->>>>>>> cf3a11b786911f50f6aedaf514aa468d2acf7af1
   display: flex;
+  margin-bottom: 21px;
 }
-<<<<<<< HEAD
-.userstory .usertripinfo {
-  margin: 20px;
-}
-.userstory .usertripinfo h1 {
-  font-size: 30px;
-}
-.userstory .usertripinfo img {
-  max-width: 200px;
-}
-=======
 .upload-top .upload-form {
   margin-left: 40px;
   width: 60%;
@@ -491,7 +442,18 @@ button:focus {
   display: flex;
   justify-content: flex-end;
 }
->>>>>>> cf3a11b786911f50f6aedaf514aa468d2acf7af1
+.userstory {
+  display: flex;
+}
+.userstory .usertripinfo {
+  margin: 20px;
+}
+.userstory .usertripinfo h1 {
+  font-size: 30px;
+}
+.userstory .usertripinfo img {
+  max-width: 200px;
+}
 .newposts {
   padding: 40px;
   text-decoration: underline;
