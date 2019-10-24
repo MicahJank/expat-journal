@@ -347,7 +347,6 @@ button:focus {
   padding: 30px 40px;
 }
 .upload-container .upload-img-container {
-  height: 684px;
   width: 840px;
   border: 0.5px solid #979797;
   border-radius: 8px;
@@ -375,7 +374,6 @@ button:focus {
 }
 .upload-top .radio-btns {
   display: flex;
-  width: 60%;
   justify-content: space-between;
   position: relative;
 }
@@ -395,6 +393,9 @@ button:focus {
   flex-direction: column;
   margin-bottom: 22px;
 }
+.upload-top .input-container:last-child {
+  margin-bottom: 0;
+}
 .upload-top .input-container label {
   font-size: 2rem;
   margin-bottom: 4px;
@@ -407,7 +408,7 @@ button:focus {
   line-height: 33px;
   font-size: 2.7rem;
   height: 59px;
-  width: 679px;
+  width: 100%;
   border: 1px solid #000000;
   border-radius: 4px;
 }
