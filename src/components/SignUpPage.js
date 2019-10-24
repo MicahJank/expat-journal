@@ -88,7 +88,10 @@ export default function SignUpPage(props) {
               required
             />
 
-            <button type="submit" className="submit-rectangle">
+            <button
+              type="submit"
+              className="submit-rectangle sign-in-rectangle"
+            >
               Join now
             </button>
           </form>
