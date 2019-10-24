@@ -387,31 +387,20 @@ button:focus {
 .upload-top .radio-btns input {
   cursor: pointer;
 }
-.upload-top .radio-btns {
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-.upload-top .radio-btns .input-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 22px;
-}
-.upload-top .radio-btns .input-container label {
-  font-size: 20px;
+.upload-top .input-container {
   font-weight: 300;
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
 }
-.upload-top .radio-btns .input-container label:last-child {
+.upload-top .input-container:last-child {
   margin-bottom: 0;
 }
-.upload-top .radio-btns .input-container label label {
+.upload-top .input-container label {
   font-size: 2rem;
   margin-bottom: 4px;
 }
-.upload-top .radio-btns .input-container label input {
+.upload-top .input-container input {
   padding: 12px;
   color: #000000;
   font-weight: 300;
@@ -423,49 +412,23 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 4px;
 }
-.upload-top .radio-btns .input-container label input:focus {
+.upload-top .input-container input:focus {
   outline: none;
   border: 1px solid #16bac5;
 }
-.upload-top .radio-btns .input-container label .input-container {
-  font-weight: 300;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 22px;
-}
-.upload-top .radio-btns .input-container label .input-container label {
-  font-size: 2rem;
-  margin-bottom: 4px;
-}
-.upload-top .radio-btns .input-container label .input-container input {
-  padding: 12px;
-  color: #000000;
-  font-weight: 300;
-  letter-spacing: 0.49px;
-  line-height: 33px;
-  font-size: 2.7rem;
-  height: 59px;
-  width: 679px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-}
-.upload-top .radio-btns .input-container label input:focus {
-  outline: none;
-  border: 1px solid #16bac5;
-}
-.upload-top .radio-btns .input-container .title {
+.upload-top .title {
   margin-top: 15px;
 }
-.upload-top .radio-btns .upload-bottom {
+.upload-bottom {
   display: flex;
   flex-direction: column;
   font-weight: 300;
   font-size: 2rem;
 }
-.upload-top .radio-btns .upload-bottom label {
+.upload-bottom label {
   margin-bottom: 4px;
 }
-.upload-top .radio-btns .upload-bottom textarea {
+.upload-bottom textarea {
   resize: none;
   padding: 13px;
   font-size: 2rem;
@@ -473,10 +436,10 @@ button:focus {
   border: 1px solid #000000;
   border-radius: 4px;
 }
-.upload-top .radio-btns .upload-bottom textarea:focus {
+.upload-bottom textarea:focus {
   border: 1px solid #16BAC5;
 }
-.upload-top .radio-btns .upload-btns {
+.upload-btns {
   display: flex;
   justify-content: flex-end;
 }
