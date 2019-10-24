@@ -10,11 +10,12 @@ import useForm from '../utils/useForm.js';
 
 const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
+    const user = localStorage.getItem('username');
 
     const submitHandler = e => {
-        e.preventDefault();
+        e.preventDefault(); 
         const { sName, sContent } = formInputs;
-        props.addStory({ sName, sContent, sImageUrl: placeholderImg });
+        props.addStory({ sName, sContent, sImageUrl: placeholderImg, user });
         clearForm();
         props.history.push('/newsfeed');
     }
