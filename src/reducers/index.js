@@ -4,7 +4,10 @@ import {
   FETCH_STORY_ERROR,
   ADD_STORY,
   ADD_STORY_SUCCESS,
-  ADD_STORY_FAIL
+  ADD_STORY_FAIL,
+  DELETE_STORY_START,
+  DELETE_STORY_SUCCESS,
+  DELETE_STORY_ERROR
 } from "../actions";
 
 const initialState = {
@@ -53,6 +56,24 @@ const reducer = (state = initialState, action) => {
         isFetching: false,
         error: true
       };
+    case DELETE_STORY_START:
+      return {
+        ...state,
+        isFetching: true,
+        error: false 
+      }
+    case DELETE_STORY_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        error: false 
+      }
+    case DELETE_STORY_ERROR:
+      return {
+         ...state,
+        isFetching: false,
+        error: true 
+      }
 
     default:
       return state;

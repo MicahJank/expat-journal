@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import trash from '../imgs/delete.png';
+import {deleteStory} from '../actions';
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 function Story(props) {
@@ -18,6 +21,10 @@ function Story(props) {
       .catch(error => console.log(error));
   }, []);
 
+
+
+
+
   return (
     <>
       <div className="headoftrip">
@@ -29,7 +36,19 @@ function Story(props) {
         </div>
 
         <div className="headbox trip-edit">
-         <button>Edit Post</button>  <img className="trash" src={trash} alt="delete diz" />
+        <Link to={`/edit/${props.match.params.id}`}><button>Edit Post</button>  </Link> 
+         
+         <img 
+         onClick={() => 
+          {props.deleteStory(props.match.params.id) 
+            props.history.push("/newsfeed")
+        console.log('onclick fire')}} 
+        className="trash" 
+        src={trash} 
+        alt="delete diz" 
+        />
+
+
         </div>
 
       </div>
@@ -59,4 +78,15 @@ function Story(props) {
   );
 }
 
-export default Story;
+// const mapStateToProps = state => {
+//   return {
+//     stories: state.stories,
+//     isFetching: state.isFetching,
+//     error: state.error
+//   };
+// };
+
+export default connect(
+  null,
+  { deleteStory }
+)(Story);
