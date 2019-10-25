@@ -506,7 +506,12 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.46);
 }
 .upload-btns .publish {
-  background-color: #16bac5;
+  border: 1px solid #16bac5;
+  background-color: white;
+  color: #16bac5;
+}
+.upload-btns .filled {
+  background-color: #16BAC5;
   color: #efe9f4;
 }
 .edit-page {
