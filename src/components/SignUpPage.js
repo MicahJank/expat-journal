@@ -10,6 +10,9 @@ import logo from '../imgs/LogoEJ.png';
 // import uploader from '../imgs/icon-uploader-2.png';
 // import save from '../imgs/save-button-2.png';
 
+
+
+
 export default function SignUpPage(props) {
   const [formInfo, handleChanges, clearForm] = useForm();
 

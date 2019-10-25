@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWIthAuth';
 
+
 // import imgs
 import logo from '../imgs/LogoEJ.png';
 // import group from '../imgs/group-svgrepo-com.png';
