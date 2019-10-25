@@ -107,8 +107,8 @@ const UploadForm = (props) => {
                     />
             </div>
             <div className='upload-btns'>
-                <button type='button'>Cancel</button>
-                <button form='upload-form' type='submit'>Publish</button>
+                <button className='cancel' onClick={() => props.history.push('/newsfeed')} type='button'>Cancel</button>
+                <button className='publish' form='upload-form' type='submit'>Publish</button>
             </div>
         </section>
     )
