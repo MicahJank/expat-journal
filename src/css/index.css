@@ -532,20 +532,16 @@ button:focus {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-content: center;
 }
 .top-bar .edit-button {
-  height: 30px;
-  padding: 10px;
-  display: inline-block;
-  width: 200px;
+  text-decoration: none;
   color: #EFE9F4;
-  font-family: Montserrat;
-  font-size: 11px;
-  text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 8px;
   background-color: #16BAC5;
+  padding: 5px 14px;
+  margin-right: 27px;
 }
 .top-bar-box {
   line-height: 40px;
@@ -557,69 +553,9 @@ button:focus {
 .top-bar-box h3 {
   font-size: 14px;
 }
-.headoftrip {
+.top-bar-actions {
   display: flex;
-  margin: 0 auto;
-  height: 40px;
-  height: 90px;
-}
-.headoftrip .headbox a {
-  padding: 10px;
-  display: inline-block;
-  color: #EFE9F4;
-  font-family: Montserrat;
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.36px;
-  text-align: center;
-  box-sizing: border-box;
-  width: 120px;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  background-color: #16BAC5;
-}
-.headoftrip .headbox .trash {
-  width: auto;
-}
-.edit-stuff {
   align-items: center;
-  display: flex;
-  width: 300px;
-}
-.edit-stuff a {
-  font-size: 22px;
-  width: 100px;
-  padding: 5px;
-  box-sizing: border-box;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  background-color: #16BAC5;
-  color: #EFE9F4;
-  font-family: Montserrat;
-  font-weight: 300;
-  letter-spacing: 0.36px;
-  text-align: center;
-}
-.edit-stuff .edit-stuff-box {
-  width: 100%;
-}
-.trip-title {
-  text-align: left;
-  color: #3b3b3b;
-  line-height: 30px;
-}
-.trip-title h1 {
-  font-size: 18px;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-.trip-title h3 {
-  font-size: 13px;
-}
-.trip-edit {
-  margin: 30px;
-  text-align: right;
-  color: white;
 }
 .userstory {
   width: 100%;
