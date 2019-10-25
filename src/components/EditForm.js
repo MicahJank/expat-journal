@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
+
 import uploadImg from '../imgs/upload.png';
 import { editStory } from '../actions';
 import useForm from '../utils/useForm.js';
@@ -104,7 +106,7 @@ const EditForm = (props) => {
         />
       </div>
       <div className="upload-btns-edit">
-        <button type="button">Cancel</button>
+        <Link to={`/stories/${props.match.params.id}`}>Cancel</Link>
         <button form='edit-form' type="submit">Apply Changes</button>
       </div>
     </section>
