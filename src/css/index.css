@@ -637,6 +637,7 @@ button:focus {
   line-height: 24px;
 }
 .upload-top-edit .input-container-edit input {
+  color: #000000;
   box-sizing: border-box;
   height: 59px;
   border: 1px solid #000000;
@@ -648,6 +649,17 @@ button:focus {
   letter-spacing: 0.49px;
   line-height: 33px;
   padding-left: 12px;
+}
+.upload-top-edit .input-container-edit ::placeholder {
+  color: #6a6a6a;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  text-align: left;
+}
+.upload-top-edit .input-container-edit input:not(:placeholder-shown) {
+  border: 1px solid #16bac5;
 }
 .upload-top-edit .input-container-edit input:focus {
   outline: none;
@@ -668,6 +680,7 @@ button:focus {
   margin-bottom: 4px;
 }
 .upload-bottom-edit textarea {
+  color: #000000;
   box-sizing: border-box;
   height: 212px;
   border: 1px solid #000000;
@@ -679,6 +692,9 @@ button:focus {
   line-height: 24px;
   resize: none;
   padding: 13px 16px 13px 24px;
+}
+.upload-bottom-edit textarea:not(:placeholder-shown) {
+  border: 1px solid #16bac5;
 }
 .upload-bottom-edit textarea:focus {
   outline: none;

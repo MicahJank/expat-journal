@@ -58,6 +58,7 @@ const EditForm = (props) => {
               name="sName"
               value={formInputs.sName || ''}
               onChange={handleChanges}
+              placeholder="Enter a Title"
             />
           </div>
 
@@ -69,6 +70,7 @@ const EditForm = (props) => {
               name="sCountry"
               value={formInputs.sCountry || ''}
               onChange={handleChanges}
+              placeholder="Enter a location"
             />
           </div>
 
@@ -80,6 +82,7 @@ const EditForm = (props) => {
               name="emoji"
               value={formInputs.emoji || ''}
               onChange={handleChanges}
+              placeholder="Enter an Emoji"
             />
           </div>
 
@@ -91,6 +94,7 @@ const EditForm = (props) => {
               name="tags"
               value={formInputs.tags || ''}
               onChange={handleChanges}
+              placeholder="Enter some tags"
             />
           </div>
         </form>
@@ -103,6 +107,7 @@ const EditForm = (props) => {
           name="sContent"
           value={formInputs.sContent || ''}
           onChange={handleChanges}
+          placeholder="Enter your story"
         />
       </div>
       <div className="upload-btns-edit">
