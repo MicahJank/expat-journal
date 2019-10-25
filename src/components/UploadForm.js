@@ -20,6 +20,14 @@ const UploadForm = (props) => {
         props.history.push('/newsfeed');
     }
 
+    const checkFilled = () => {
+        if(formInputs.sName && formInputs.sContent) {
+          return 'filled';
+        } else {
+          return '';
+        }
+      }
+
     return (
         <section className='upload-container'>
             <div className='upload-top'>
@@ -108,7 +116,7 @@ const UploadForm = (props) => {
             </div>
             <div className='upload-btns'>
                 <button className='cancel' onClick={() => props.history.push('/newsfeed')} type='button'>Cancel</button>
-                <button className='publish' form='upload-form' type='submit'>Publish</button>
+                <button className={`publish ${checkFilled()}`} form='upload-form' type='submit'>Publish</button>
             </div>
         </section>
     )
