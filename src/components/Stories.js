@@ -49,7 +49,7 @@ function Story(props) {
           </div>
           <div className='save'>
             <img className='save-btn' src={save} alt="save story button" />
-            <p>Save</p>
+            <p className='save p'>Save</p>
           </div>
         </div>
       )

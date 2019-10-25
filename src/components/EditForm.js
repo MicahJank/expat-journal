@@ -30,6 +30,14 @@ const EditForm = (props) => {
     props.history.push('/newsfeed');
   }
 
+  const checkFilled = () => {
+    if(formInputs.sName && formInputs.sContent) {
+      return 'filled';
+    } else {
+      return '';
+    }
+  }
+
   return (
     <section className="upload-container-edit">
       <div className="upload-top-edit">
@@ -112,7 +120,7 @@ const EditForm = (props) => {
       </div>
       <div className="upload-btns-edit">
         <Link to={`/stories/${props.match.params.id}`}>Cancel</Link>
-        <button form='edit-form' type="submit">Apply Changes</button>
+        <button className={`apply-changes ${checkFilled()}`} form='edit-form' type="submit">Apply Changes</button>
       </div>
     </section>
   );

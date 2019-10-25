@@ -560,8 +560,10 @@ button:focus {
 }
 .top-bar-actions {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   text-align: center;
+  font-size: 1.4rem;
+  color: #65817D;
 }
 .top-bar-actions p {
   margin-top: 7.5px;
@@ -805,8 +807,13 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.46);
   margin-right: 24px;
 }
-.upload-btns-edit button:last-child {
-  background-color: #16bac5;
+.upload-btns-edit .apply-changes {
+  border: 1px solid #16bac5;
+  background-color: white;
+  color: #16bac5;
+}
+.upload-btns-edit .filled {
+  background-color: #16BAC5;
   color: #efe9f4;
 }
 .upload-container-edit .edit-img-container {
