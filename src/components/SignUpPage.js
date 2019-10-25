@@ -10,6 +10,9 @@ import logo from '../imgs/LogoEJ.png';
 // import uploader from '../imgs/icon-uploader-2.png';
 // import save from '../imgs/save-button-2.png';
 
+
+
+
 export default function SignUpPage(props) {
   const [formInfo, handleChanges, clearForm] = useForm();
 
@@ -27,8 +30,18 @@ export default function SignUpPage(props) {
       clearForm();
   }
 
+  // function that checks if all fields of the form have been filled out if they have
+  // returns a classname to be applied to the jsx element
+  const checkFilled = () => {
+    if(formInfo.username && formInfo.email && formInfo.password && formInfo.confirmPassword) {
+      return 'filled';
+    } else {
+      return '';
+    }
+  }
+
   return (
-    <div className="auth-page">
+    <div className="auth-page main">
       <div className="auth-column auth-left">
         <img className="auth-logo" src={logo} alt="expat journal logo" />
       </div>
@@ -86,7 +99,7 @@ export default function SignUpPage(props) {
 
             <button
               type="submit"
-              className="submit-rectangle sign-in-rectangle"
+              className={`submit-rectangle sign-in-rectangle ${checkFilled()}`}
             >
               Join now
             </button>

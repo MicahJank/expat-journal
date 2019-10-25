@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { addStory } from '../actions';
 import { connect } from 'react-redux';
@@ -10,11 +10,12 @@ import useForm from '../utils/useForm.js';
 
 const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
+    const user = localStorage.getItem('username');;
 
     const submitHandler = e => {
-        e.preventDefault();
+        e.preventDefault(); 
         const { sName, sContent } = formInputs;
-        props.addStory({ sName, sContent, sImageUrl: placeholderImg });
+        props.addStory({ sName, sContent, sImageUrl: placeholderImg, user });
         clearForm();
         props.history.push('/newsfeed');
     }
@@ -51,6 +52,7 @@ const UploadForm = (props) => {
                         required
                         value={formInputs.sName || ''}
                         onChange={handleChanges}
+                        placeholder="Enter a title"
                         />
                     </div>
 
@@ -62,6 +64,7 @@ const UploadForm = (props) => {
                         name='sCountry'
                         value={formInputs.sCountry || ''}
                         onChange={handleChanges}
+                        placeholder="Enter a location"
                         />
                     </div>
 
@@ -73,6 +76,7 @@ const UploadForm = (props) => {
                         name='emoji'
                         value={formInputs.emoji || ''}
                         onChange={handleChanges}
+                        placeholder="Enter an emoji"
                         />
                     </div>
 
@@ -84,6 +88,7 @@ const UploadForm = (props) => {
                         name='tags'
                         value={formInputs.tags || ''}
                         onChange={handleChanges}
+                        placeholder="Enter some tags"
                         />
                     </div>
 
@@ -98,11 +103,12 @@ const UploadForm = (props) => {
                     required
                     value={formInputs.sContent || ''}
                     onChange={handleChanges}
+                    placeholder="Enter your story"
                     />
             </div>
             <div className='upload-btns'>
-                <button type='button'>Cancel</button>
-                <button form='upload-form' type='submit'>Publish</button>
+                <button className='cancel' onClick={() => props.history.push('/newsfeed')} type='button'>Cancel</button>
+                <button className='publish' form='upload-form' type='submit'>Publish</button>
             </div>
         </section>
     )

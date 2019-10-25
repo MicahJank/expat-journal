@@ -79,6 +79,7 @@
     }
 
     input {
+      color: #000000;
       box-sizing: border-box;
       height: 59px;
       border: 1px solid #000000;
@@ -91,6 +92,20 @@
       letter-spacing: 0.49px;
       line-height: 33px;
       padding-left: 12px;
+    }
+
+    ::placeholder {
+      color: #6a6a6a;
+      // font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.36px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    input:not(:placeholder-shown) {
+      border: 1px solid #16bac5;
     }
 
     input:focus {
@@ -118,6 +133,7 @@
   }
 
   textarea {
+    color: #000000;
     box-sizing: border-box;
     height: 212px;
     border: 1px solid #000000;
@@ -130,6 +146,10 @@
     line-height: 24px;
     resize: none;
     padding: 13px 16px 13px 24px;
+  }
+
+  textarea:not(:placeholder-shown) {
+    border: 1px solid #16bac5;
   }
 
   textarea:focus {
@@ -145,16 +165,25 @@
 
   button {
     height: 44px;
+    cursor: pointer;
     // width: 158px;
     font-size: 25px;
     letter-spacing: 0.45px;
     line-height: 30px;
     text-align: center;
+    border: none;
     border-radius: 3px;
     padding: 0 30px;
   }
 
-  button:first-child {
+  a {
+    text-decoration: none;
+    // width: 158px;
+    font-size: 25px;
+    height: 45px;
+    letter-spacing: 0.45px;
+    border-radius: 3px;
+    padding: 10px 30px;
     border: 1px solid #16bac5;
     color: #16bac5;
     background-color: rgba(255, 255, 255, 0.46);

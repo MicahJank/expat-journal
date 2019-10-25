@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { axiosWithAuth } from '../utils/axiosWIthAuth';
 
+
 // import imgs
 import logo from '../imgs/LogoEJ.png';
 // import group from '../imgs/group-svgrepo-com.png';
@@ -10,10 +11,7 @@ import logo from '../imgs/LogoEJ.png';
 
 class LoginPage extends React.Component {
   state = {
-    credentials: {
-      username: '',
-      password: ''
-    }
+    credentials: {}
   };
 
   handleChange = e => {
@@ -37,9 +35,19 @@ class LoginPage extends React.Component {
       .catch(err => console.log(err));
   };
 
+    // function that checks if all fields of the form have been filled out if they have
+  // returns a classname to be applied to the jsx element
+  checkFilled = () => {
+    if(this.state.credentials.username && this.state.credentials.password) {
+      return 'filled';
+    } else {
+      return '';
+    }
+  }
+
   render() {
     return (
-      <div className="auth-page">
+      <div className="auth-page main">
         <div className="auth-column auth-left">
           <img className="auth-logo" src={logo} alt="expat journal logo" />
         </div>
@@ -58,7 +66,7 @@ class LoginPage extends React.Component {
                 type="text"
                 name="username"
                 placeholder="Name"
-                value={this.state.credentials.username}
+                value={this.state.credentials.username || ''}
                 onChange={this.handleChange}
                 required
               ></input>
@@ -66,13 +74,13 @@ class LoginPage extends React.Component {
                 type="password"
                 name="password"
                 placeholder="Password"
-                value={this.state.credentials.password}
+                value={this.state.credentials.password || ''}
                 onChange={this.handleChange}
                 required
               ></input>
               <button
                 type="submit"
-                className="submit-rectangle sign-in-rectangle"
+                className={`submit-rectangle sign-in-rectangle ${this.checkFilled()}`}
               >
                 Sign in
               </button>

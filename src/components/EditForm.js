@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
+
 import uploadImg from '../imgs/upload.png';
 import { editStory } from '../actions';
 import useForm from '../utils/useForm.js';
@@ -56,6 +58,7 @@ const EditForm = (props) => {
               name="sName"
               value={formInputs.sName || ''}
               onChange={handleChanges}
+              placeholder="Enter a title"
             />
           </div>
 
@@ -67,6 +70,7 @@ const EditForm = (props) => {
               name="sCountry"
               value={formInputs.sCountry || ''}
               onChange={handleChanges}
+              placeholder="Enter a location"
             />
           </div>
 
@@ -78,6 +82,7 @@ const EditForm = (props) => {
               name="emoji"
               value={formInputs.emoji || ''}
               onChange={handleChanges}
+              placeholder="Enter an emoji"
             />
           </div>
 
@@ -89,6 +94,7 @@ const EditForm = (props) => {
               name="tags"
               value={formInputs.tags || ''}
               onChange={handleChanges}
+              placeholder="Enter some tags"
             />
           </div>
         </form>
@@ -101,10 +107,11 @@ const EditForm = (props) => {
           name="sContent"
           value={formInputs.sContent || ''}
           onChange={handleChanges}
+          placeholder="Enter your story"
         />
       </div>
       <div className="upload-btns-edit">
-        <button type="button">Cancel</button>
+        <Link to={`/stories/${props.match.params.id}`}>Cancel</Link>
         <button form='edit-form' type="submit">Apply Changes</button>
       </div>
     </section>
