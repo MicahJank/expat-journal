@@ -560,7 +560,7 @@ button:focus {
 }
 .top-bar-actions {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   text-align: center;
   font-size: 1.4rem;
   color: #65817D;
