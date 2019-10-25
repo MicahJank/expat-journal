@@ -21,7 +21,8 @@ function Story(props) {
   }, []);
 
   return (
-    <>
+    <div className="edit-page">
+    <div className="big-box">
       <div className="headoftrip">
         <div className="headbox trip-title">
           <h1>{trip.sName}</h1>
@@ -29,12 +30,19 @@ function Story(props) {
           <p>{trip.sCountry}</p>
         </div>
 
-        <div className="headbox trip-edit">
-          <Link to={`/edit/${props.match.params.id}`}>
-            <button>Edit Post</button>{" "}
-          </Link>
+        
 
-          <img
+        <div className="edit-stuff">
+
+          <div className="edit-stuff-box">
+          <Link  to={`/edit/${props.match.params.id}`}>
+         Edit Post </Link>
+          </div>
+     
+
+
+          <div className="edit-stuff-box">
+         <img
             onClick={() => {
               props.deleteStory(props.match.params.id);
               props.history.push("/newsfeed");
@@ -44,7 +52,12 @@ function Story(props) {
             src={trash}
             alt="delete diz"
           />
+         </div>
+       
         </div>
+
+
+
       </div>
 
       <div className="userstory">
@@ -53,14 +66,19 @@ function Story(props) {
         </div>
 
         <div className="usertripinfo">
-          <h1>{trip.sName}</h1>
+  
 
           <p>{trip.sContent}</p>
         </div>
       </div>
 
       <div className="upvotes">78 upvotes</div>
-    </>
+    
+   
+    </div>
+    </div>
+ 
+   
   );
 }
 
