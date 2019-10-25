@@ -615,7 +615,6 @@ button:focus {
   flex-wrap: wrap;
 }
 .allstories .singlestory {
-  margin: 30px;
   font-size: 13px;
 }
 .allstories .singlestory a {
@@ -631,6 +630,9 @@ button:focus {
 .allstories .singlestory h1 {
   padding: 16px;
   text-align: center;
+}
+.allstories .newsfeed-spacer {
+  width: 350px;
 }
 .footer-bar {
   height: 116px;
