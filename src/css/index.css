@@ -444,6 +444,17 @@ button:focus {
   outline: none;
   border: 1px solid #16bac5;
 }
+.upload-top .input-container input::placeholder {
+  color: #6a6a6a;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  line-height: 24px;
+  text-align: left;
+}
+.upload-top .input-container input:not(:placeholder-shown) {
+  border: 1px solid #16bac5;
+}
 .upload-top .title {
   margin-top: 15px;
 }
@@ -466,6 +477,9 @@ button:focus {
 }
 .upload-bottom textarea:focus {
   border: 1px solid #16BAC5;
+}
+.upload-bottom textarea:not(:placeholder-shown) {
+  border: 1px solid #16bac5;
 }
 .upload-btns {
   display: flex;

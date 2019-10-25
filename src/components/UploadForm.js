@@ -52,6 +52,7 @@ const UploadForm = (props) => {
                         required
                         value={formInputs.sName || ''}
                         onChange={handleChanges}
+                        placeholder="Enter a title"
                         />
                     </div>
 
@@ -63,6 +64,7 @@ const UploadForm = (props) => {
                         name='sCountry'
                         value={formInputs.sCountry || ''}
                         onChange={handleChanges}
+                        placeholder="Enter a location"
                         />
                     </div>
 
@@ -74,6 +76,7 @@ const UploadForm = (props) => {
                         name='emoji'
                         value={formInputs.emoji || ''}
                         onChange={handleChanges}
+                        placeholder="Enter an emoji"
                         />
                     </div>
 
@@ -85,6 +88,7 @@ const UploadForm = (props) => {
                         name='tags'
                         value={formInputs.tags || ''}
                         onChange={handleChanges}
+                        placeholder="Enter some tags"
                         />
                     </div>
 
@@ -99,6 +103,7 @@ const UploadForm = (props) => {
                     required
                     value={formInputs.sContent || ''}
                     onChange={handleChanges}
+                    placeholder="Enter your story"
                     />
             </div>
             <div className='upload-btns'>

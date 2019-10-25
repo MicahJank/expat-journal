@@ -58,7 +58,7 @@ const EditForm = (props) => {
               name="sName"
               value={formInputs.sName || ''}
               onChange={handleChanges}
-              placeholder="Enter a Title"
+              placeholder="Enter a title"
             />
           </div>
 
@@ -82,7 +82,7 @@ const EditForm = (props) => {
               name="emoji"
               value={formInputs.emoji || ''}
               onChange={handleChanges}
-              placeholder="Enter an Emoji"
+              placeholder="Enter an emoji"
             />
           </div>
 
