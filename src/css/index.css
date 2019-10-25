@@ -446,36 +446,66 @@ button:focus {
   display: flex;
   justify-content: flex-end;
 }
-.userstory {
-  display: flex;
-  max-width: 1300px;
+.edit-page {
+  background: url('../imgs/plane.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  width: 100%;
+  height: 610px;
+  color: #585757;
+}
+.big-box {
+  box-sizing: border-box;
+  border: 1px solid #979797;
+  border-radius: 8px;
+  width: 90%;
   margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
-.userstory .usertripinfo {
-  margin: 20px;
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.userstory .usertripinfo h1 {
+.top-bar .edit-button {
+  height: 30px;
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  color: #EFE9F4;
+  font-family: Montserrat;
+  font-size: 11px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  background-color: #16BAC5;
+}
+.top-bar-box {
+  line-height: 40px;
+}
+.top-bar-box h1 {
+  text-decoration: underline;
   font-size: 30px;
 }
-.userstory .usertripinfo img {
-  border-radius: 20px;
-  max-width: 500px;
+.top-bar-box h3 {
+  font-size: 14px;
 }
 .headoftrip {
-  max-width: 1300px;
   display: flex;
   margin: 0 auto;
   height: 40px;
-  height: 100px;
+  height: 90px;
 }
-.headoftrip .headbox {
-  width: 970px;
-}
-.headoftrip .headbox button {
+.headoftrip .headbox a {
+  padding: 10px;
   display: inline-block;
   color: #EFE9F4;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 300;
   letter-spacing: 0.36px;
   text-align: center;
@@ -486,22 +516,70 @@ button:focus {
   background-color: #16BAC5;
 }
 .headoftrip .headbox .trash {
-  margin: 0;
-  display: inline-block;
-  width: 28px;
+  width: auto;
+}
+.edit-stuff {
+  align-items: center;
+  display: flex;
+  width: 300px;
+}
+.edit-stuff a {
+  font-size: 22px;
+  width: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  background-color: #16BAC5;
+  color: #EFE9F4;
+  font-family: Montserrat;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+  text-align: center;
+}
+.edit-stuff .edit-stuff-box {
+  width: 100%;
 }
 .trip-title {
-  margin: 30px;
   text-align: left;
+  color: #3b3b3b;
+  line-height: 30px;
+}
+.trip-title h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.trip-title h3 {
+  font-size: 13px;
 }
 .trip-edit {
   margin: 30px;
   text-align: right;
   color: white;
 }
+.userstory {
+  width: 100%;
+  display: flex;
+}
+.userstory .usertripinfo {
+  padding: 10px;
+}
+.userstory .usertripinfo img {
+  border-radius: 10px;
+  max-width: 500px;
+  border: 1px solid #707070;
+}
+.userstory .usertripinfo p {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 24px;
+  color: #515151;
+}
 .upvotes {
   text-align: right;
   padding: 30px;
+  font-size: 18px;
 }
 .newposts {
   padding: 40px;
@@ -519,14 +597,23 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
 }
+.allstories .singlestory {
+  margin: 30px;
+  font-size: 13px;
+}
+.allstories .singlestory a {
+  text-decoration: none;
+  color: #16BAC5;
+  text-transform: uppercase;
+}
 .allstories .singlestory img {
   max-width: 350px;
   max-height: 400px;
   border-radius: 10px;
 }
 .allstories .singlestory h1 {
-  padding: 30px;
-  font-size: 30px;
+  padding: 16px;
+  text-align: center;
 }
 .footer-bar {
   height: 116px;
