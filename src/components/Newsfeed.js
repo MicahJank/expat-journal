@@ -25,6 +25,11 @@ class NewsFeed extends Component {
               </>
             );
           })}
+          <div className='newsfeed-spacer'></div>
+          <div className='newsfeed-spacer'></div>
+          <div className='newsfeed-spacer'></div>
+          <div className='newsfeed-spacer'></div>
+          
         </div>
       </div>
     );

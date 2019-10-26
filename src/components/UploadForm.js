@@ -8,6 +8,8 @@ import placeholderImg from '../imgs/static.jpg';
 
 import useForm from '../utils/useForm.js';
 
+
+
 const UploadForm = (props) => {
     const [formInputs, handleChanges, clearForm] = useForm();
     const user = localStorage.getItem('username');;

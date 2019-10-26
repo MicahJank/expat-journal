@@ -31,15 +31,14 @@ export const fetchStories = () => {
  // ADD STORY TO API
 
 export const addStory = add => dispatch => {
-  dispatch({ type: ADD_STORY });
-
+  dispatch({ type: FETCH_STORY_START });
   axios
     .post("https://pt11expat.herokuapp.com/api/stories/new/", add)
     .then(res => {
-      dispatch({ type: ADD_STORY_SUCCESS, payload: res.data });
+      dispatch({ type: FETCH_STORY_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      dispatch({ type: ADD_STORY_FAIL, payload: err });
+      dispatch({ type: FETCH_STORY_ERROR, payload: err });
     });
 };
 

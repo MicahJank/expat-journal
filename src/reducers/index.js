@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         error: false,
         isFetching: false,
-        stories: action.payload
+        stories: action.payload.reverse()
       };
     case FETCH_STORY_ERROR:
       return {
