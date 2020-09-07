@@ -10,10 +10,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9bc4c7bd-1f44-4d42-96f0-8f8d0ba576ad/deploy-status)](https://app.netlify.com/sites/expat-journal-savareen/deploys)
 
 
-
+[![Github User Search Screenshot][product-screenshot]](https://example.com)
 <!-- PROJECT LOGO -->
 <br />
- <img src="https://i.ibb.co/S5vnwJm/icon.png" alt="Logo" />
 <p align="center">
 
   <p align="center">
@@ -32,8 +31,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Github User Search Screenshot][product-screenshot]](https://example.com)
 
 - use the search tool to find users based on their Github name
 - see user stats and list of followers
