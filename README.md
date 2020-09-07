@@ -6,7 +6,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Issues][issues-shield]][issues-url]
 [![Maintainability](https://api.codeclimate.com/v1/badges/4f3af6ad8c08d85c13eb/maintainability)](https://codeclimate.com/github/MicahJank/expat-journal/maintainability)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9bc4c7bd-1f44-4d42-96f0-8f8d0ba576ad/deploy-status)](https://app.netlify.com/sites/expat-journal-savareen/deploys)
 
@@ -14,20 +13,20 @@
 
 <!-- PROJECT LOGO -->
 <br />
- <img src="https://i.ibb.co/pzZxpzh/githubusersearch.png" alt="Logo" />
+ <img src="https://i.ibb.co/S5vnwJm/icon.png" alt="Logo" />
 <p align="center">
 
   <p align="center">
-    An easy and quick way to find users and their followers.
+    A community for sharing experiences.
     <br />
-    <a href="https://github.com/MicahJank/github-user-search"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MicahJank/expat-journal"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://expat-journal-savareen.netlify.com/#/sign-in">View Demo</a>
     ·
-    <a href="https://github.com/MicahJank/github-user-search/issues">Report Bug</a>
+    <a href="https://github.com/MicahJank/expat-journal/issues">Report Bug</a>
     ·
-    <a href="https://github.com/MicahJank/github-user-search/issues">Request Feature</a>
+    <a href="https://github.com/MicahJank/expat-journal/issues">Request Feature</a>
   </p>
 </p>
 
