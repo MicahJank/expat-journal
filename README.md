@@ -31,14 +31,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-- use the search tool to find users based on their Github name
-- see user stats and list of followers
-- click on user card to see github contribution chart
+Expat Journal is a place for travelers and expats to share there experiences.
+- scroll through the stories feed to see the latests posts
+- upvote your favorite stories and save the best stories
+- sign up with an account to begin uploading your own experiences
 
 ### Built With
 * [React](https://reactjs.org/)
-* [Github API](https://docs.github.com/en/rest)
+* [Redux](https://redux.js.org/)
+* [React Router](https://reactrouter.com/)
 
 
 
@@ -52,7 +53,7 @@ To get a local copy up and running follow these simple example steps.
 1. Fork the repo
 2. Clone the forked repo to your local machine
 ```sh
-git clone https://github.com/MicahJank/github-user-search.git
+git clone https://github.com/MicahJank/expat-journal.git
 ```
 3. Install NPM packages
 ```sh
