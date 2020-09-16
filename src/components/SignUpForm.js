@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignUpForm = ({ formInfo, submitHandler, handleChanges }) => {
+const SignUpForm = ({ formInfo, submitHandler, handleChanges, checkFilled }) => {
     return (
         <form onSubmit={submitHandler}>
             <input className={formInfo.error ? 'error' : ''} type="text" name="username" placeholder="Name" 

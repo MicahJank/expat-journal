@@ -50,7 +50,7 @@ export default function SignUpPage(props) {
         <div className="auth-form">
           <h2>Sign up to start your journal</h2>
 
-          <SignUpForm submitHandler={submitHandler} handleChanges={handleChanges} formInfo={formInfo} />
+          <SignUpForm checkFilled={checkFilled} submitHandler={submitHandler} handleChanges={handleChanges} formInfo={formInfo} />
 
           <h4 className="auth-extra-sign-in-header">
             Already have an account? <Link to="/sign-in">Sign in</Link> here!
